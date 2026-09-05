@@ -4,17 +4,14 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
 
-# Required for:
-# - GitHub OIDC → AWS
-# - cosign keyless image signing
 permissions:
   contents: read
   id-token: write
+  security-events: write
 
 env:
   AWS_REGION: ap-south-1
@@ -27,25 +24,23 @@ jobs:
 
     steps:
 
-      # ============================================================
-      # 1. CHECKOUT
-      # ============================================================
+      # ------------------------------------------------------------
+      # 1. Checkout
+      # ------------------------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
 
-
-      # ============================================================
-      # 2. SET UP PYTHON
-      # ============================================================
+      # ------------------------------------------------------------
+      # 2. Set up Python
+      # ------------------------------------------------------------
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
-
-      # ============================================================
-      # 3. INSTALL DEPENDENCIES
-      # ============================================================
+      # ------------------------------------------------------------
+      # 3. Install dependencies
+      # ------------------------------------------------------------
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -54,37 +49,25 @@ jobs:
             pip install -r requirements.txt
           fi
 
-
-      # ============================================================
-      # 4. PYTHON DEPENDENCY SECURITY SCAN
-      # ============================================================
+      # ------------------------------------------------------------
+      # 4. Python dependency security scan
+      # ------------------------------------------------------------
       - name: Run pip-audit
         run: |
           pip install pip-audit
-          pip-audit || true
+          pip-audit
 
-
-      # ============================================================
-      # 5. SAST - BANDIT
-      #
-      # Security gate:
-      # - -ll = report medium severity and above
-      # - No || true
-      # - Failure blocks the pipeline
-      # ============================================================
+      # ------------------------------------------------------------
+      # 5. SAST - Bandit
+      # ------------------------------------------------------------
       - name: Run Bandit
         run: |
           pip install bandit
           bandit -r . -x ./.venv -ll
 
-
-      # ============================================================
-      # 6. TRIVY FILESYSTEM SECURITY SCAN
-      #
-      # Security gate:
-      # - HIGH and CRITICAL vulnerabilities
-      # - exit-code 1 means pipeline fails
-      # ============================================================
+      # ------------------------------------------------------------
+      # 6. Trivy filesystem security gate
+      # ------------------------------------------------------------
       - name: Trivy filesystem scan
         uses: aquasecurity/trivy-action@master
         with:
@@ -95,25 +78,16 @@ jobs:
           ignore-unfixed: true
           exit-code: 1
 
-
-      # ============================================================
-      # 7. BUILD DOCKER IMAGE
-      # ============================================================
+      # ------------------------------------------------------------
+      # 7. Build Docker image
+      # ------------------------------------------------------------
       - name: Build Docker image
         run: |
-          docker build \
-            -t devsecops-app:latest \
-            .
+          docker build -t devsecops-app:latest .
 
-
-      # ============================================================
-      # 8. TRIVY CONTAINER SECURITY SCAN
-      #
-      # Security gate:
-      # - HIGH and CRITICAL vulnerabilities
-      # - .trivyignore is respected
-      # - exit-code 1 blocks pipeline
-      # ============================================================
+      # ------------------------------------------------------------
+      # 8. Trivy container security gate
+      # ------------------------------------------------------------
       - name: Trivy container scan
         uses: aquasecurity/trivy-action@master
         with:
@@ -124,13 +98,9 @@ jobs:
           ignorefile: .trivyignore
           exit-code: 1
 
-
-      # ============================================================
-      # 9. GITHUB OIDC DIAGNOSTICS
-      #
-      # Prints non-sensitive OIDC claims.
-      # JWT itself is NEVER printed.
-      # ============================================================
+      # ------------------------------------------------------------
+      # 9. GitHub OIDC diagnostics
+      # ------------------------------------------------------------
       - name: Debug GitHub OIDC
         env:
           ACTIONS_ID_TOKEN_REQUEST_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -165,9 +135,6 @@ jobs:
           echo "OIDC token successfully obtained."
           echo "Token length: ${#TOKEN}"
 
-          echo ""
-          echo "Decoding non-sensitive OIDC claims..."
-
           PAYLOAD=$(echo "$TOKEN" | cut -d '.' -f2)
 
           case $((${#PAYLOAD} % 4)) in
@@ -201,17 +168,9 @@ jobs:
             job_workflow_ref
           }'
 
-          echo ""
-          echo "Expected IAM audience:"
-          echo "aud = sts.amazonaws.com"
-
-          echo ""
-          echo "OIDC diagnostics completed."
-
-
-      # ============================================================
-      # 10. CONFIGURE AWS CREDENTIALS USING GITHUB OIDC
-      # ============================================================
+      # ------------------------------------------------------------
+      # 10. Configure AWS credentials using GitHub OIDC
+      # ------------------------------------------------------------
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -220,26 +179,37 @@ jobs:
           role-session-name: GitHubActions
           audience: sts.amazonaws.com
 
-
-      # ============================================================
-      # 11. VERIFY AWS IDENTITY
-      # ============================================================
+      # ------------------------------------------------------------
+      # 11. Verify AWS identity
+      # ------------------------------------------------------------
       - name: Verify AWS identity
         run: |
           aws sts get-caller-identity
 
+      # ------------------------------------------------------------
+      # 12. Verify ECR scan-on-push configuration
+      # ------------------------------------------------------------
+      - name: Verify ECR scan-on-push
+        run: |
+          aws ecr put-image-scanning-configuration \
+            --repository-name "$ECR_REPOSITORY" \
+            --image-scanning-configuration scanOnPush=true \
+            --region "$AWS_REGION"
 
-      # ============================================================
-      # 12. LOGIN TO AMAZON ECR
-      # ============================================================
+          aws ecr describe-image-scanning-configuration \
+            --repository-name "$ECR_REPOSITORY" \
+            --region "$AWS_REGION"
+
+      # ------------------------------------------------------------
+      # 13. Login to Amazon ECR
+      # ------------------------------------------------------------
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-
-      # ============================================================
-      # 13. TAG DOCKER IMAGE FOR ECR
-      # ============================================================
+      # ------------------------------------------------------------
+      # 14. Tag Docker image
+      # ------------------------------------------------------------
       - name: Tag Docker image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -248,67 +218,52 @@ jobs:
             devsecops-app:latest \
             $REGISTRY/${ECR_REPOSITORY}:latest
 
-
-      # ============================================================
-      # 14. PUSH IMAGE TO ECR
-      #
-      # ECR scan-on-push must be enabled separately in AWS.
-      # ============================================================
+      # ------------------------------------------------------------
+      # 15. Push image to ECR
+      # ------------------------------------------------------------
       - name: Push Docker image to ECR
+        id: push-image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
           docker push \
             $REGISTRY/${ECR_REPOSITORY}:latest
 
-
-      # ============================================================
-      # 15. INSTALL COSIGN
-      #
-      # Keyless signing uses OIDC.
-      # No private signing key is stored in GitHub Secrets.
-      # ============================================================
-      - name: Install cosign
+      # ------------------------------------------------------------
+      # 16. Install Cosign
+      # ------------------------------------------------------------
+      - name: Install Cosign
         uses: sigstore/cosign-installer@v3
 
-
-      # ============================================================
-      # 16. SIGN ECR IMAGE WITH COSIGN
-      #
-      # Keyless signing:
-      # GitHub Actions OIDC
-      #        ↓
-      # Sigstore/Fulcio
-      #        ↓
-      # Signed container image
-      # ============================================================
+      # ------------------------------------------------------------
+      # 17. Sign container image using keyless signing
+      # ------------------------------------------------------------
       - name: Sign container image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
           IMAGE="$REGISTRY/${ECR_REPOSITORY}:latest"
 
-          DIGEST=$(docker inspect \
-            --format='{{index .RepoDigests 0}}' \
-            "$IMAGE")
+          DIGEST=$(aws ecr describe-images \
+            --repository-name "$ECR_REPOSITORY" \
+            --image-ids imageTag=latest \
+            --region "$AWS_REGION" \
+            --query 'imageDetails[0].imageDigest' \
+            --output text)
 
-          if [ -z "$DIGEST" ]; then
-            echo "::error::Could not determine pushed image digest"
+          if [ -z "$DIGEST" ] || [ "$DIGEST" = "None" ]; then
+            echo "::error::Could not retrieve ECR image digest"
             exit 1
           fi
 
-          echo "Signing image:"
-          echo "$DIGEST"
+          echo "Image digest: $DIGEST"
+          echo "Signing: $IMAGE@$DIGEST"
 
-          cosign sign --yes "$DIGEST"
+          cosign sign --yes "$IMAGE@$DIGEST"
 
-
-      # ============================================================
-      # 17. START APPLICATION FOR DAST
-      #
-      # Dockerfile exposes port 5001.
-      # Host port 5001 → container port 5001.
-      # ============================================================
+      # ------------------------------------------------------------
+      # 18. Start application for DAST
+      # ------------------------------------------------------------
       - name: Start application
         run: |
           docker run -d \
@@ -319,36 +274,27 @@ jobs:
           echo "Waiting for application to become healthy..."
 
           for i in {1..30}; do
-
             if curl -fsS http://localhost:5001/health; then
               echo ""
               echo "Application is healthy."
-              exit 0
+              break
             fi
 
             if [ "$i" -eq 30 ]; then
               echo "::error::Application failed to become healthy"
-
-              echo ""
-              echo "Container logs:"
               docker logs devsecops-app
-
               exit 1
             fi
 
-            echo "Attempt $i/30 - application not ready yet."
-
             sleep 2
-
           done
 
-
-      # ============================================================
-      # 18. OWASP ZAP DAST SECURITY GATE
+      # ------------------------------------------------------------
+      # 19. OWASP ZAP DAST
       #
-      # Scans the running Flask application.
-      # fail_action: true makes ZAP findings fail the job.
-      # ============================================================
+      # ZAP baseline produces warnings for low-risk hardening items.
+      # The pipeline must gate on actual FAIL findings.
+      # ------------------------------------------------------------
       - name: Run OWASP ZAP
         uses: zaproxy/action-baseline@v0.15.0
         with:
@@ -356,12 +302,9 @@ jobs:
           fail_action: true
           allow_issue_writing: false
 
-
-      # ============================================================
-      # 19. CLEANUP
-      #
-      # Always runs, including when ZAP or another security gate fails.
-      # ============================================================
+      # ------------------------------------------------------------
+      # 20. Cleanup
+      # ------------------------------------------------------------
       - name: Cleanup application container
         if: always()
         run: |
