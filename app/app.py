@@ -17,7 +17,7 @@ def add_security_headers(response):
         "frame-ancestors 'none'; "
         "object-src 'none'; "
         "script-src 'self'; "
-        "style-src 'self' 'unsafe-inline'; "
+        "style-src 'self'; "
         "img-src 'self' data:; "
         "font-src 'self' data:; "
         "connect-src 'self'; "
@@ -43,6 +43,7 @@ def add_security_headers(response):
     )
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "0"
+    response.headers["Vary"] = "*"
 
     response.headers.pop("Server", None)
 
@@ -62,4 +63,3 @@ def health():
 if __name__ == "__main__":
     host = os.getenv("HOST", "0.0.0.0")  # nosec B104
     app.run(host=host, port=5001)
-
