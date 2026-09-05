@@ -38,14 +38,14 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t devsecops-app .
+          docker build -t devsecops-app:latest .
 
       - name: Start application
         run: |
           docker run -d \
             --name devsecops-test \
             -p 5001:5001 \
-            devsecops-app
+            devsecops-app:latest
 
       - name: Wait for application
         run: |
@@ -72,13 +72,14 @@ jobs:
         if: always()
         run: |
           docker stop devsecops-test || true
+          docker rm devsecops-test || true
 
       - name: Install Trivy
         run: |
           sudo apt-get update
           sudo apt-get install -y wget
-          wget -qO- https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | \
-            sudo sh -s -- -b /usr/local/bin
+          wget -qO- https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
+            | sudo sh -s -- -b /usr/local/bin
 
       - name: Trivy container scan
         run: |
@@ -88,13 +89,18 @@ jobs:
             --ignore-unfixed \
             --ignorefile .trivyignore \
             --exit-code 1 \
-            devsecops-app
+            devsecops-app:latest
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_ROLE_ARN }}
           aws-region: ap-south-1
+          role-session-name: GitHubActions
+
+      - name: Verify AWS identity
+        run: |
+          aws sts get-caller-identity
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -102,10 +108,12 @@ jobs:
 
       - name: Tag Docker image
         run: |
-          docker tag devsecops-app:latest \
+          docker tag \
+            devsecops-app:latest \
             ${{ steps.login-ecr.outputs.registry }}/devsecops-app:latest
 
       - name: Push Docker image to ECR
         run: |
           docker push \
             ${{ steps.login-ecr.outputs.registry }}/devsecops-app:latest
+
