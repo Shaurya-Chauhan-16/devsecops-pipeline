@@ -5,6 +5,31 @@ from flask import Flask
 app = Flask(__name__)
 
 
+@app.after_request
+def add_security_headers(response):
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["Content-Security-Policy"] = (
+        "default-src 'self'; "
+        "script-src 'self'; "
+        "style-src 'self' 'unsafe-inline'; "
+        "img-src 'self' data:; "
+        "font-src 'self' data:; "
+        "connect-src 'self'; "
+        "frame-ancestors 'none';"
+    )
+    response.headers["Permissions-Policy"] = (
+        "camera=(), microphone=(), geolocation=()"
+    )
+    response.headers["Cross-Origin-Embedder-Policy"] = "require-corp"
+    response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+    response.headers["Cross-Origin-Resource-Policy"] = "same-origin"
+    response.headers["Cache-Control"] = "no-store"
+    response.headers.pop("Server", None)
+
+    return response
+
+
 @app.route("/")
 def home():
     return "DevSecOps application is running!"
@@ -18,3 +43,4 @@ def health():
 if __name__ == "__main__":
     host = os.getenv("HOST", "0.0.0.0")  # nosec B104
     app.run(host=host, port=5001)
+
