@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::135330967527:oidc-provider/token.actions.githubusercontent.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+        },
+        "StringLike": {
+          "token.actions.githubusercontent.com:sub": [
+            "repo:Shaurya-Chauhan-16@182733086/devsecops-pipeline@1358080577:ref:refs/heads/main",
+            "repo:Shaurya-Chauhan-16@182733086/devsecops-pipeline@1358080577:pull_request"
+          ]
+        }
+      }
+    }
+  ]
+}
