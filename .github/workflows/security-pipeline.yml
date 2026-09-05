@@ -47,5 +47,6 @@ jobs:
             --scanners vuln \
             --severity HIGH,CRITICAL \
             --ignore-unfixed \
+            --ignorefile .trivyignore \
             --exit-code 1 \
             devsecops-app
