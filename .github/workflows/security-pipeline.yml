@@ -36,7 +36,7 @@ jobs:
           docker build -t devsecops-app .
 
       - name: Trivy container scan
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.33.1
         with:
           image-ref: devsecops-app
           format: table
