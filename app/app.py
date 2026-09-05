@@ -16,5 +16,5 @@ def health():
 
 
 if __name__ == "__main__":
-    host = os.getenv("HOST", "127.0.0.1")
+    host = os.getenv("HOST", "0.0.0.0")
     app.run(host=host, port=5001)
