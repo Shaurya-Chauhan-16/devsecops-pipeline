@@ -35,12 +35,17 @@ jobs:
         run: |
           docker build -t devsecops-app .
 
+      - name: Install Trivy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget -qO- https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
+
       - name: Trivy container scan
-        uses: aquasecurity/trivy-action@v0.33.1
-        with:
-          image-ref: devsecops-app
-          format: table
-          exit-code: "1"
-          ignore-unfixed: true
-          severity: HIGH,CRITICAL
-          scanners: vuln
+        run: |
+          trivy image \
+            --scanners vuln \
+            --severity HIGH,CRITICAL \
+            --ignore-unfixed \
+            --exit-code 1 \
+            devsecops-app
