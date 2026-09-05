@@ -22,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       # ------------------------------------------------------------
       # 1. Checkout
       # ------------------------------------------------------------
@@ -42,6 +43,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
@@ -55,7 +57,7 @@ jobs:
           pip-audit || true
 
       # ------------------------------------------------------------
-      # 5. Bandit security scan
+      # 5. SAST - Bandit
       # ------------------------------------------------------------
       - name: Run Bandit
         run: |
@@ -71,9 +73,9 @@ jobs:
           scan-type: fs
           scan-ref: .
           format: table
-          exit-code: 0
-          ignore-unfixed: true
           severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: 0
 
       # ------------------------------------------------------------
       # 7. Build Docker image
@@ -83,7 +85,7 @@ jobs:
           docker build -t devsecops-app:latest .
 
       # ------------------------------------------------------------
-      # 8. Trivy container scan
+      # 8. Trivy container security gate
       # ------------------------------------------------------------
       - name: Trivy container scan
         uses: aquasecurity/trivy-action@master
@@ -96,12 +98,7 @@ jobs:
           exit-code: 1
 
       # ------------------------------------------------------------
-      # 9. DEBUG GITHUB OIDC
-      #
-      # This is intentionally BEFORE configure-aws-credentials.
-      #
-      # It obtains the real GitHub OIDC JWT and prints ONLY
-      # non-sensitive claims. The JWT itself is never printed.
+      # 9. GitHub OIDC diagnostics
       # ------------------------------------------------------------
       - name: Debug GitHub OIDC
         env:
@@ -142,7 +139,6 @@ jobs:
 
           PAYLOAD=$(echo "$TOKEN" | cut -d '.' -f2)
 
-          # Add base64 padding if necessary
           case $((${#PAYLOAD} % 4)) in
             2) PAYLOAD="${PAYLOAD}==" ;;
             3) PAYLOAD="${PAYLOAD}=" ;;
@@ -157,6 +153,7 @@ jobs:
 
           echo ""
           echo "OIDC claims:"
+
           echo "$CLAIMS" | jq '{
             iss,
             aud,
@@ -176,7 +173,7 @@ jobs:
           echo ""
           echo "Expected IAM trust values:"
           echo "aud = sts.amazonaws.com"
-          echo "sub = repo:Shaurya-Chauhan-16/devsecops-pipeline:ref:refs/heads/main"
+          echo "sub = GitHub repository subject configured in IAM"
 
       # ------------------------------------------------------------
       # 10. Configure AWS credentials using GitHub OIDC
@@ -210,11 +207,12 @@ jobs:
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
-          docker tag devsecops-app:latest \
+          docker tag \
+            devsecops-app:latest \
             $REGISTRY/${ECR_REPOSITORY}:latest
 
       # ------------------------------------------------------------
-      # 14. Push image to ECR
+      # 14. Push Docker image to ECR
       # ------------------------------------------------------------
       - name: Push Docker image to ECR
         env:
@@ -224,10 +222,56 @@ jobs:
             $REGISTRY/${ECR_REPOSITORY}:latest
 
       # ------------------------------------------------------------
-      # 15. OWASP ZAP scan
+      # 15. Start application for DAST
+      # ------------------------------------------------------------
+      - name: Start application
+        run: |
+          docker run -d \
+            --name devsecops-app \
+            -p 5001:5001 \
+            devsecops-app:latest
+
+          echo "Waiting for application to become healthy..."
+
+          for i in {1..30}; do
+            if curl -fsS http://localhost:5001/health; then
+              echo ""
+              echo "Application is healthy."
+              break
+            fi
+
+            if [ "$i" -eq 30 ]; then
+              echo "::error::Application failed to become healthy"
+              docker logs devsecops-app
+              exit 1
+            fi
+
+            sleep 2
+          done
+
+          echo ""
+          echo "Testing application endpoints..."
+
+          curl -fsS http://localhost:5001/
+          echo ""
+
+          curl -fsS http://localhost:5001/health
+          echo ""
+
+      # ------------------------------------------------------------
+      # 16. OWASP ZAP DAST security gate
       # ------------------------------------------------------------
       - name: Run OWASP ZAP
-        run: |
-          echo "OWASP ZAP scan configuration goes here."
-          echo "Replace this with your existing ZAP scan command."
+        uses: zaproxy/action-baseline@v0.15.0
+        with:
+          target: "http://localhost:5001"
+          fail_action: true
+          allow_issue_writing: false
 
+      # ------------------------------------------------------------
+      # 17. Cleanup
+      # ------------------------------------------------------------
+      - name: Cleanup application container
+        if: always()
+        run: |
+          docker rm -f devsecops-app 2>/dev/null || true
