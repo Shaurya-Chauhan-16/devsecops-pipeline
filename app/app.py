@@ -4,6 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.after_request
 def add_security_headers(response):
     response.headers["X-Frame-Options"] = "DENY"
@@ -11,23 +12,26 @@ def add_security_headers(response):
 
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
+        "base-uri 'self'; "
+        "form-action 'self'; "
+        "frame-ancestors 'none'; "
+        "object-src 'none'; "
         "script-src 'self'; "
         "style-src 'self' 'unsafe-inline'; "
         "img-src 'self' data:; "
         "font-src 'self' data:; "
         "connect-src 'self'; "
-        "object-src 'none'; "
-        "base-uri 'self'; "
-        "form-action 'self'; "
-        "frame-ancestors 'none'; "
         "media-src 'self'; "
         "manifest-src 'self'; "
         "worker-src 'self';"
     )
 
     response.headers["Permissions-Policy"] = (
-        "camera=(), microphone=(), geolocation=(), "
-        "payment=(), usb=()"
+        "camera=(), "
+        "microphone=(), "
+        "geolocation=(), "
+        "payment=(), "
+        "usb=()"
     )
 
     response.headers["Cross-Origin-Embedder-Policy"] = "require-corp"

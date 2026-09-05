@@ -1,5 +1,6 @@
 Flask
 bandit
+gunicorn
 jaraco.context>=6.1.0
 msgpack>=1.2.1
 setuptools>=78.1.1
