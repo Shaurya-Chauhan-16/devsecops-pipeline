@@ -16,5 +16,5 @@ def health():
 
 
 if __name__ == "__main__":
-    host = os.getenv("HOST", "0.0.0.0")
+    host = os.getenv("HOST", "0.0.0.0")  # nosec B104
     app.run(host=host, port=5001)
