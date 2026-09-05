@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -26,20 +26,21 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install bandit
 
-      - name: Run Bandit SAST
+      - name: Bandit security scan
         run: |
-          bandit -r app/ -ll
+          bandit -r app/
 
       - name: Build Docker image
         run: |
           docker build -t devsecops-app .
 
-      - name: Run Trivy container scan
-        uses: aquasecurity/trivy-action@master
+      - name: Trivy container scan
+        uses: aquasecurity/trivy-action@0.33.1
         with:
           image-ref: devsecops-app
-          severity: HIGH,CRITICAL
+          format: table
           exit-code: "1"
           ignore-unfixed: true
+          severity: HIGH,CRITICAL
+          scanners: vuln
