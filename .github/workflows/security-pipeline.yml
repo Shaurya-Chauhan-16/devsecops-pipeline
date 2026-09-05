@@ -1,4 +1,3 @@
-```yaml
 name: DevSecOps Security Pipeline
 
 on:
@@ -231,4 +230,4 @@ jobs:
         run: |
           echo "OWASP ZAP scan configuration goes here."
           echo "Replace this with your existing ZAP scan command."
-```
+
