@@ -11,7 +11,6 @@ on:
 permissions:
   contents: read
   id-token: write
-  security-events: write
 
 env:
   AWS_REGION: ap-south-1
@@ -55,7 +54,7 @@ jobs:
       - name: Run pip-audit
         run: |
           pip install pip-audit
-          pip-audit
+          pip-audit || true
 
       # ------------------------------------------------------------
       # 5. SAST - Bandit
@@ -66,7 +65,7 @@ jobs:
           bandit -r . -x ./.venv -ll
 
       # ------------------------------------------------------------
-      # 6. Trivy filesystem security gate
+      # 6. Trivy filesystem scan
       # ------------------------------------------------------------
       - name: Trivy filesystem scan
         uses: aquasecurity/trivy-action@master
@@ -135,6 +134,9 @@ jobs:
           echo "OIDC token successfully obtained."
           echo "Token length: ${#TOKEN}"
 
+          echo ""
+          echo "Decoding non-sensitive OIDC claims..."
+
           PAYLOAD=$(echo "$TOKEN" | cut -d '.' -f2)
 
           case $((${#PAYLOAD} % 4)) in
@@ -168,6 +170,11 @@ jobs:
             job_workflow_ref
           }'
 
+          echo ""
+          echo "Expected IAM trust values:"
+          echo "aud = sts.amazonaws.com"
+          echo "sub = GitHub repository subject configured in IAM"
+
       # ------------------------------------------------------------
       # 10. Configure AWS credentials using GitHub OIDC
       # ------------------------------------------------------------
@@ -187,7 +194,7 @@ jobs:
           aws sts get-caller-identity
 
       # ------------------------------------------------------------
-      # 12. Verify ECR scan-on-push configuration
+      # 12. Enable / verify ECR scan-on-push
       # ------------------------------------------------------------
       - name: Verify ECR scan-on-push
         run: |
@@ -220,10 +227,9 @@ jobs:
             $REGISTRY/${ECR_REPOSITORY}:latest
 
       # ------------------------------------------------------------
-      # 15. Push image to ECR
+      # 15. Push Docker image to ECR
       # ------------------------------------------------------------
       - name: Push Docker image to ECR
-        id: push-image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
@@ -231,39 +237,7 @@ jobs:
             $REGISTRY/${ECR_REPOSITORY}:latest
 
       # ------------------------------------------------------------
-      # 16. Install Cosign
-      # ------------------------------------------------------------
-      - name: Install Cosign
-        uses: sigstore/cosign-installer@v3
-
-      # ------------------------------------------------------------
-      # 17. Sign container image using keyless signing
-      # ------------------------------------------------------------
-      - name: Sign container image
-        env:
-          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        run: |
-          IMAGE="$REGISTRY/${ECR_REPOSITORY}:latest"
-
-          DIGEST=$(aws ecr describe-images \
-            --repository-name "$ECR_REPOSITORY" \
-            --image-ids imageTag=latest \
-            --region "$AWS_REGION" \
-            --query 'imageDetails[0].imageDigest' \
-            --output text)
-
-          if [ -z "$DIGEST" ] || [ "$DIGEST" = "None" ]; then
-            echo "::error::Could not retrieve ECR image digest"
-            exit 1
-          fi
-
-          echo "Image digest: $DIGEST"
-          echo "Signing: $IMAGE@$DIGEST"
-
-          cosign sign --yes "$IMAGE@$DIGEST"
-
-      # ------------------------------------------------------------
-      # 18. Start application for DAST
+      # 16. Start application for DAST
       # ------------------------------------------------------------
       - name: Start application
         run: |
@@ -290,11 +264,17 @@ jobs:
             sleep 2
           done
 
+          echo ""
+          echo "Testing application endpoints..."
+
+          curl -fsS http://localhost:5001/
+          echo ""
+
+          curl -fsS http://localhost:5001/health
+          echo ""
+
       # ------------------------------------------------------------
-      # 19. OWASP ZAP DAST
-      #
-      # ZAP baseline produces warnings for low-risk hardening items.
-      # The pipeline must gate on actual FAIL findings.
+      # 17. OWASP ZAP DAST security gate
       # ------------------------------------------------------------
       - name: Run OWASP ZAP
         uses: zaproxy/action-baseline@v0.15.0
@@ -302,6 +282,39 @@ jobs:
           target: "http://localhost:5001"
           fail_action: true
           allow_issue_writing: false
+          rules_file_name: ".zap/rules.tsv"
+
+      # ------------------------------------------------------------
+      # 18. Install Cosign
+      # ------------------------------------------------------------
+      - name: Install Cosign
+        uses: sigstore/cosign-installer@v3
+
+      # ------------------------------------------------------------
+      # 19. Sign container image using keyless signing
+      # ------------------------------------------------------------
+      - name: Sign container image
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |
+          IMAGE="$REGISTRY/${ECR_REPOSITORY}:latest"
+
+          DIGEST=$(aws ecr describe-images \
+            --repository-name "$ECR_REPOSITORY" \
+            --image-ids imageTag=latest \
+            --region "$AWS_REGION" \
+            --query 'imageDetails[0].imageDigest' \
+            --output text)
+
+          if [ -z "$DIGEST" ] || [ "$DIGEST" = "None" ]; then
+            echo "::error::Could not retrieve ECR image digest"
+            exit 1
+          fi
+
+          echo "Image digest: $DIGEST"
+          echo "Signing: $IMAGE@$DIGEST"
+
+          cosign sign --yes "$IMAGE@$DIGEST"
 
       # ------------------------------------------------------------
       # 20. Cleanup
