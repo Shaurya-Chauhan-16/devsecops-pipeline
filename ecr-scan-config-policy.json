@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowEcrScanConfig",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:PutImageScanningConfiguration",
+        "ecr:GetRegistryScanningConfiguration",
+        "ecr:DescribeImageScanFindings"
+      ],
+      "Resource": "arn:aws:ecr:ap-south-1:135330967527:repository/devsecops-app"
+    }
+  ]
+}

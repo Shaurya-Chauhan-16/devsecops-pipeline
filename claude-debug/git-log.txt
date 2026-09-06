@@ -1,0 +1,10 @@
+81f3bc4 Retry OIDC authentication
+f4a9b92 Retry OIDC authentication
+04d2a9f Retry AWS OIDC authentication
+f4b4a15 Add GitHub OIDC claim diagnostics
+853e81d Add GitHub OIDC claim diagnostics
+1a4a9f3 Add GitHub OIDC diagnostics
+bcce5bd Add GitHub OIDC diagnostics
+b53a9c5 Debug GitHub OIDC configuration
+fdeab53 Allow ZAP issue reporting
+ac600f3 Fix AWS ECR security pipeline

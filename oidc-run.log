@@ -1,0 +1,1437 @@
+Security Checks	Set up job	﻿2026-09-05T14:05:37.2144087Z Current runner version: '2.337.0'
+Security Checks	Set up job	2026-09-05T14:05:37.2169809Z ##[group]Runner Image Provisioner
+Security Checks	Set up job	2026-09-05T14:05:37.2170800Z Hosted Compute Agent
+Security Checks	Set up job	2026-09-05T14:05:37.2171422Z Version: 20260828.587
+Security Checks	Set up job	2026-09-05T14:05:37.2172066Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Security Checks	Set up job	2026-09-05T14:05:37.2172857Z Build Date: 2026-08-28T16:44:25Z
+Security Checks	Set up job	2026-09-05T14:05:37.2173540Z Worker ID: {29b5ec73-7e02-4878-a049-5c74226ed4e6}
+Security Checks	Set up job	2026-09-05T14:05:37.2174272Z Azure Region: westus3
+Security Checks	Set up job	2026-09-05T14:05:37.2175325Z ##[endgroup]
+Security Checks	Set up job	2026-09-05T14:05:37.2176816Z ##[group]Operating System
+Security Checks	Set up job	2026-09-05T14:05:37.2177557Z Ubuntu
+Security Checks	Set up job	2026-09-05T14:05:37.2178097Z 24.04.4
+Security Checks	Set up job	2026-09-05T14:05:37.2178633Z LTS
+Security Checks	Set up job	2026-09-05T14:05:37.2179208Z ##[endgroup]
+Security Checks	Set up job	2026-09-05T14:05:37.2179764Z ##[group]Runner Image
+Security Checks	Set up job	2026-09-05T14:05:37.2180406Z Image: ubuntu-24.04
+Security Checks	Set up job	2026-09-05T14:05:37.2180999Z Version: 20260831.293.1
+Security Checks	Set up job	2026-09-05T14:05:37.2182103Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260831.293/images/ubuntu/Ubuntu2404-Readme.md
+Security Checks	Set up job	2026-09-05T14:05:37.2183884Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260831.293
+Security Checks	Set up job	2026-09-05T14:05:37.2185119Z ##[endgroup]
+Security Checks	Set up job	2026-09-05T14:05:37.2186317Z ##[group]GITHUB_TOKEN Permissions
+Security Checks	Set up job	2026-09-05T14:05:37.2188222Z Contents: read
+Security Checks	Set up job	2026-09-05T14:05:37.2188938Z Metadata: read
+Security Checks	Set up job	2026-09-05T14:05:37.2189509Z ##[endgroup]
+Security Checks	Set up job	2026-09-05T14:05:37.2191604Z Secret source: Actions
+Security Checks	Set up job	2026-09-05T14:05:37.2192708Z Prepare workflow directory
+Security Checks	Set up job	2026-09-05T14:05:37.2592218Z Prepare all required actions
+Security Checks	Set up job	2026-09-05T14:05:37.2640762Z Getting action download info
+Security Checks	Set up job	2026-09-05T14:05:37.5769283Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Security Checks	Set up job	2026-09-05T14:05:37.6991743Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Security Checks	Set up job	2026-09-05T14:05:37.7811970Z Download action repository 'aquasecurity/trivy-action@master' (SHA:d2a0b60797ff03db6132bd4e2b293f9b37081297)
+Security Checks	Set up job	2026-09-05T14:05:38.3227147Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+Security Checks	Set up job	2026-09-05T14:05:38.9189087Z Download action repository 'aws-actions/amazon-ecr-login@v2' (SHA:03f1aad4c6c7ffd436567f42f9384779290529bd)
+Security Checks	Set up job	2026-09-05T14:05:39.7124414Z Getting action download info
+Security Checks	Set up job	2026-09-05T14:05:39.8320873Z Download action repository 'aquasecurity/setup-trivy@81e514348e19b6112ce2a7e3ecbafe19c1e1f567' (SHA:81e514348e19b6112ce2a7e3ecbafe19c1e1f567)
+Security Checks	Set up job	2026-09-05T14:05:40.0530875Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+Security Checks	Set up job	2026-09-05T14:05:40.1864761Z Getting action download info
+Security Checks	Set up job	2026-09-05T14:05:40.2978861Z Download action repository 'actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb' (SHA:9255dc7a253b0ccc959486e2bca901246202afeb)
+Security Checks	Set up job	2026-09-05T14:05:40.4566832Z Download action repository 'actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8' (SHA:8e8c483db84b4bee98b60c0593521ed34d9990e8)
+Security Checks	Set up job	2026-09-05T14:05:40.6233874Z Getting action download info
+Security Checks	Set up job	2026-09-05T14:05:40.7406131Z Getting action download info
+Security Checks	Set up job	2026-09-05T14:05:40.9205733Z Complete job name: Security Checks
+Security Checks	Checkout code	﻿2026-09-05T14:05:40.9935914Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Security Checks	Checkout code	2026-09-05T14:05:40.9943822Z ##[group]Run actions/checkout@v4
+Security Checks	Checkout code	2026-09-05T14:05:40.9944281Z with:
+Security Checks	Checkout code	2026-09-05T14:05:40.9944818Z   repository: Shaurya-Chauhan-16/devsecops-pipeline
+Security Checks	Checkout code	2026-09-05T14:05:40.9947264Z   token: ***
+Security Checks	Checkout code	2026-09-05T14:05:40.9947478Z   ssh-strict: true
+Security Checks	Checkout code	2026-09-05T14:05:40.9947688Z   ssh-user: git
+Security Checks	Checkout code	2026-09-05T14:05:40.9947908Z   persist-credentials: true
+Security Checks	Checkout code	2026-09-05T14:05:40.9948149Z   clean: true
+Security Checks	Checkout code	2026-09-05T14:05:40.9948373Z   sparse-checkout-cone-mode: true
+Security Checks	Checkout code	2026-09-05T14:05:40.9948625Z   fetch-depth: 1
+Security Checks	Checkout code	2026-09-05T14:05:40.9949074Z   fetch-tags: false
+Security Checks	Checkout code	2026-09-05T14:05:40.9949282Z   show-progress: true
+Security Checks	Checkout code	2026-09-05T14:05:40.9949498Z   lfs: false
+Security Checks	Checkout code	2026-09-05T14:05:40.9949697Z   submodules: false
+Security Checks	Checkout code	2026-09-05T14:05:40.9949948Z   set-safe-directory: true
+Security Checks	Checkout code	2026-09-05T14:05:40.9950252Z   allow-unsafe-pr-checkout: false
+Security Checks	Checkout code	2026-09-05T14:05:40.9950804Z env:
+Security Checks	Checkout code	2026-09-05T14:05:40.9951026Z   AWS_REGION: ap-south-1
+Security Checks	Checkout code	2026-09-05T14:05:40.9951289Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Checkout code	2026-09-05T14:05:40.9951535Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.1000149Z Syncing repository: Shaurya-Chauhan-16/devsecops-pipeline
+Security Checks	Checkout code	2026-09-05T14:05:41.1001600Z ##[group]Getting Git version info
+Security Checks	Checkout code	2026-09-05T14:05:41.1002256Z Working directory is '/home/runner/work/devsecops-pipeline/devsecops-pipeline'
+Security Checks	Checkout code	2026-09-05T14:05:41.1002953Z [command]/usr/bin/git version
+Security Checks	Checkout code	2026-09-05T14:05:41.1047751Z git version 2.55.0
+Security Checks	Checkout code	2026-09-05T14:05:41.1071153Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.1094297Z Temporarily overriding HOME='/home/runner/work/_temp/31571635-4f72-44a4-a798-9066b3909c2d' before making global git config changes
+Security Checks	Checkout code	2026-09-05T14:05:41.1096165Z Adding repository directory to the temporary git global config as a safe directory
+Security Checks	Checkout code	2026-09-05T14:05:41.1101885Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devsecops-pipeline/devsecops-pipeline
+Security Checks	Checkout code	2026-09-05T14:05:41.1156018Z Deleting the contents of '/home/runner/work/devsecops-pipeline/devsecops-pipeline'
+Security Checks	Checkout code	2026-09-05T14:05:41.1160289Z ##[group]Initializing the repository
+Security Checks	Checkout code	2026-09-05T14:05:41.1166112Z [command]/usr/bin/git init /home/runner/work/devsecops-pipeline/devsecops-pipeline
+Security Checks	Checkout code	2026-09-05T14:05:41.1274088Z hint: Using 'master' as the name for the initial branch. This default branch name
+Security Checks	Checkout code	2026-09-05T14:05:41.1275138Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Security Checks	Checkout code	2026-09-05T14:05:41.1276118Z hint: to use in all of your new repositories, which will suppress this warning,
+Security Checks	Checkout code	2026-09-05T14:05:41.1276842Z hint: call:
+Security Checks	Checkout code	2026-09-05T14:05:41.1277179Z hint:
+Security Checks	Checkout code	2026-09-05T14:05:41.1277646Z hint: 	git config --global init.defaultBranch <name>
+Security Checks	Checkout code	2026-09-05T14:05:41.1278207Z hint:
+Security Checks	Checkout code	2026-09-05T14:05:41.1278793Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Security Checks	Checkout code	2026-09-05T14:05:41.1279631Z hint: 'development'. The just-created branch can be renamed via this command:
+Security Checks	Checkout code	2026-09-05T14:05:41.1280295Z hint:
+Security Checks	Checkout code	2026-09-05T14:05:41.1280678Z hint: 	git branch -m <name>
+Security Checks	Checkout code	2026-09-05T14:05:41.1280998Z hint:
+Security Checks	Checkout code	2026-09-05T14:05:41.1281372Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Security Checks	Checkout code	2026-09-05T14:05:41.1282477Z Initialized empty Git repository in /home/runner/work/devsecops-pipeline/devsecops-pipeline/.git/
+Security Checks	Checkout code	2026-09-05T14:05:41.1291921Z [command]/usr/bin/git remote add origin https://github.com/Shaurya-Chauhan-16/devsecops-pipeline
+Security Checks	Checkout code	2026-09-05T14:05:41.1336907Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.1337622Z ##[group]Disabling automatic garbage collection
+Security Checks	Checkout code	2026-09-05T14:05:41.1342308Z [command]/usr/bin/git config --local gc.auto 0
+Security Checks	Checkout code	2026-09-05T14:05:41.1373298Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.1373752Z ##[group]Setting up auth
+Security Checks	Checkout code	2026-09-05T14:05:41.1382190Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Security Checks	Checkout code	2026-09-05T14:05:41.1418889Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Security Checks	Checkout code	2026-09-05T14:05:41.1777667Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Security Checks	Checkout code	2026-09-05T14:05:41.1817470Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Security Checks	Checkout code	2026-09-05T14:05:41.2067930Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Security Checks	Checkout code	2026-09-05T14:05:41.2104813Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Security Checks	Checkout code	2026-09-05T14:05:41.2329965Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Security Checks	Checkout code	2026-09-05T14:05:41.2368951Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.2369684Z ##[group]Fetching the repository
+Security Checks	Checkout code	2026-09-05T14:05:41.2379256Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f4b4a15d7d4edf60496b4aeb787cf31092387152:refs/remotes/origin/main
+Security Checks	Checkout code	2026-09-05T14:05:41.6509552Z From https://github.com/Shaurya-Chauhan-16/devsecops-pipeline
+Security Checks	Checkout code	2026-09-05T14:05:41.6510498Z  * [new ref]         f4b4a15d7d4edf60496b4aeb787cf31092387152 -> origin/main
+Security Checks	Checkout code	2026-09-05T14:05:41.6514214Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.6515273Z ##[group]Determining the checkout info
+Security Checks	Checkout code	2026-09-05T14:05:41.6517485Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.6523530Z [command]/usr/bin/git sparse-checkout disable
+Security Checks	Checkout code	2026-09-05T14:05:41.6580222Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Security Checks	Checkout code	2026-09-05T14:05:41.6611243Z ##[group]Checking out the ref
+Security Checks	Checkout code	2026-09-05T14:05:41.6615418Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Security Checks	Checkout code	2026-09-05T14:05:41.6668448Z Switched to a new branch 'main'
+Security Checks	Checkout code	2026-09-05T14:05:41.6674969Z branch 'main' set up to track 'origin/main'.
+Security Checks	Checkout code	2026-09-05T14:05:41.6679380Z ##[endgroup]
+Security Checks	Checkout code	2026-09-05T14:05:41.6723215Z [command]/usr/bin/git log -1 --format=%H
+Security Checks	Checkout code	2026-09-05T14:05:41.6750200Z f4b4a15d7d4edf60496b4aeb787cf31092387152
+Security Checks	Set up Python	﻿2026-09-05T14:05:41.6995926Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Security Checks	Set up Python	2026-09-05T14:05:41.6997692Z ##[group]Run actions/setup-python@v5
+Security Checks	Set up Python	2026-09-05T14:05:41.6997966Z with:
+Security Checks	Set up Python	2026-09-05T14:05:41.6998164Z   python-version: 3.13
+Security Checks	Set up Python	2026-09-05T14:05:41.6998388Z   check-latest: false
+Security Checks	Set up Python	2026-09-05T14:05:41.7000665Z   token: ***
+Security Checks	Set up Python	2026-09-05T14:05:41.7000901Z   update-environment: true
+Security Checks	Set up Python	2026-09-05T14:05:41.7001155Z   allow-prereleases: false
+Security Checks	Set up Python	2026-09-05T14:05:41.7001385Z   freethreaded: false
+Security Checks	Set up Python	2026-09-05T14:05:41.7001587Z env:
+Security Checks	Set up Python	2026-09-05T14:05:41.7001773Z   AWS_REGION: ap-south-1
+Security Checks	Set up Python	2026-09-05T14:05:41.7002011Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Set up Python	2026-09-05T14:05:41.7002253Z ##[endgroup]
+Security Checks	Set up Python	2026-09-05T14:05:41.8317789Z ##[group]Installed versions
+Security Checks	Set up Python	2026-09-05T14:05:41.8412165Z (node:2326) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Security Checks	Set up Python	2026-09-05T14:05:41.8413545Z Successfully set up CPython (3.13.15)
+Security Checks	Set up Python	2026-09-05T14:05:41.8414396Z ##[endgroup]
+Security Checks	Set up Python	2026-09-05T14:05:41.8430224Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Security Checks	Install dependencies	﻿2026-09-05T14:05:41.8566890Z ##[group]Run python -m pip install --upgrade pip
+Security Checks	Install dependencies	2026-09-05T14:05:41.8567388Z ^[[36;1mpython -m pip install --upgrade pip^[[0m
+Security Checks	Install dependencies	2026-09-05T14:05:41.8567742Z ^[[36;1mif [ -f requirements.txt ]; then^[[0m
+Security Checks	Install dependencies	2026-09-05T14:05:41.8568074Z ^[[36;1m  pip install -r requirements.txt^[[0m
+Security Checks	Install dependencies	2026-09-05T14:05:41.8568353Z ^[[36;1mfi^[[0m
+Security Checks	Install dependencies	2026-09-05T14:05:41.8618436Z shell: /usr/bin/bash -e {0}
+Security Checks	Install dependencies	2026-09-05T14:05:41.8618744Z env:
+Security Checks	Install dependencies	2026-09-05T14:05:41.8618947Z   AWS_REGION: ap-south-1
+Security Checks	Install dependencies	2026-09-05T14:05:41.8619201Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Install dependencies	2026-09-05T14:05:41.8619521Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Install dependencies	2026-09-05T14:05:41.8619983Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Install dependencies	2026-09-05T14:05:41.8620437Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Install dependencies	2026-09-05T14:05:41.8620829Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Install dependencies	2026-09-05T14:05:41.8621221Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Install dependencies	2026-09-05T14:05:41.8621636Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Install dependencies	2026-09-05T14:05:41.8622010Z ##[endgroup]
+Security Checks	Install dependencies	2026-09-05T14:05:42.5562141Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (26.2.1)
+Security Checks	Install dependencies	2026-09-05T14:05:43.1269906Z Collecting Flask (from -r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.1931099Z   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.2118041Z Collecting bandit (from -r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.2213370Z   Downloading bandit-1.9.4-py3-none-any.whl.metadata (7.1 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.2367579Z Collecting jaraco.context>=6.1.0 (from -r requirements.txt (line 3))
+Security Checks	Install dependencies	2026-09-05T14:05:43.2463410Z   Downloading jaraco_context-6.1.2-py3-none-any.whl.metadata (4.2 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.3286924Z Collecting msgpack>=1.2.1 (from -r requirements.txt (line 4))
+Security Checks	Install dependencies	2026-09-05T14:05:43.3385334Z   Downloading msgpack-1.2.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.4138682Z Collecting setuptools>=78.1.1 (from -r requirements.txt (line 5))
+Security Checks	Install dependencies	2026-09-05T14:05:43.4237526Z   Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.4447209Z Collecting wheel>=0.46.2 (from -r requirements.txt (line 6))
+Security Checks	Install dependencies	2026-09-05T14:05:43.4544791Z   Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.4657321Z Collecting blinker>=1.9.0 (from Flask->-r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.4751484Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.4908598Z Collecting click>=8.1.3 (from Flask->-r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.5007823Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.5121409Z Collecting itsdangerous>=2.2.0 (from Flask->-r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.5217412Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.5353568Z Collecting jinja2>=3.1.2 (from Flask->-r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.5448735Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.5913804Z Collecting markupsafe>=2.1.1 (from Flask->-r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.6013250Z   Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.6185722Z Collecting werkzeug>=3.1.0 (from Flask->-r requirements.txt (line 1))
+Security Checks	Install dependencies	2026-09-05T14:05:43.6281626Z   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.6640503Z Collecting PyYAML>=5.3.1 (from bandit->-r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.6739827Z   Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.6944184Z Collecting stevedore>=1.20.0 (from bandit->-r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.7040784Z   Downloading stevedore-5.9.1-py3-none-any.whl.metadata (2.3 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.7363802Z Collecting rich (from bandit->-r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.7461716Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.7660131Z Collecting packaging>=24.0 (from wheel>=0.46.2->-r requirements.txt (line 6))
+Security Checks	Install dependencies	2026-09-05T14:05:43.7756867Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.7923600Z Collecting markdown-it-py>=2.2.0 (from rich->bandit->-r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.8019978Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.8213167Z Collecting pygments<3.0.0,>=2.13.0 (from rich->bandit->-r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.8310014Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.8471858Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->bandit->-r requirements.txt (line 2))
+Security Checks	Install dependencies	2026-09-05T14:05:43.8566578Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.8699052Z Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.8930228Z Downloading bandit-1.9.4-py3-none-any.whl (134 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.9131495Z Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.9250632Z Downloading msgpack-1.2.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (417 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.9532215Z Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.9748880Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 31.1 MB/s  0:00:00
+Security Checks	Install dependencies	2026-09-05T14:05:43.9843387Z Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:43.9961404Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0080025Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0197806Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0317671Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0439490Z Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0557583Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0680468Z Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.0811821Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 51.1 MB/s  0:00:00
+Security Checks	Install dependencies	2026-09-05T14:05:44.0907645Z Downloading stevedore-5.9.1-py3-none-any.whl (54 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.1031574Z Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.1155433Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.1280772Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.1356104Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 205.9 MB/s  0:00:00
+Security Checks	Install dependencies	2026-09-05T14:05:44.1451356Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.1568925Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Security Checks	Install dependencies	2026-09-05T14:05:44.2431989Z Installing collected packages: stevedore, setuptools, PyYAML, pygments, packaging, msgpack, mdurl, markupsafe, jaraco.context, itsdangerous, click, blinker, wheel, werkzeug, markdown-it-py, jinja2, rich, Flask, bandit
+Security Checks	Install dependencies	2026-09-05T14:05:46.4528670Z 
+Security Checks	Install dependencies	2026-09-05T14:05:46.4554142Z Successfully installed Flask-3.1.3 PyYAML-6.0.3 bandit-1.9.4 blinker-1.9.0 click-8.5.0 itsdangerous-2.2.0 jaraco.context-6.1.2 jinja2-3.1.6 markdown-it-py-4.2.0 markupsafe-3.0.3 mdurl-0.1.2 msgpack-1.2.2 packaging-26.3 pygments-2.21.0 rich-15.0.0 setuptools-84.0.0 stevedore-5.9.1 werkzeug-3.1.8 wheel-0.48.0
+Security Checks	Run pip-audit	﻿2026-09-05T14:05:46.5217022Z ##[group]Run pip install pip-audit
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5217386Z ^[[36;1mpip install pip-audit^[[0m
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5217641Z ^[[36;1mpip-audit || true^[[0m
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5255372Z shell: /usr/bin/bash -e {0}
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5255737Z env:
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5255942Z   AWS_REGION: ap-south-1
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5256193Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5256654Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5257107Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5257545Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5257948Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5258332Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5258721Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Run pip-audit	2026-09-05T14:05:46.5259047Z ##[endgroup]
+Security Checks	Run pip-audit	2026-09-05T14:05:46.9089650Z Collecting pip-audit
+Security Checks	Run pip-audit	2026-09-05T14:05:46.9534866Z   Downloading pip_audit-2.10.1-py3-none-any.whl.metadata (28 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:46.9752979Z Collecting CacheControl>=0.13.0 (from CacheControl[filecache]>=0.13.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:46.9782637Z   Downloading cachecontrol-0.14.4-py3-none-any.whl.metadata (3.1 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0101117Z Collecting cyclonedx-python-lib<12,>=5 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0136198Z   Downloading cyclonedx_python_lib-11.12.0-py3-none-any.whl.metadata (6.9 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0185595Z Requirement already satisfied: packaging>=23.0.0 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from pip-audit) (26.3)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0284244Z Collecting pip-api>=0.0.28 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0315364Z   Downloading pip_api-0.0.34-py3-none-any.whl.metadata (6.6 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0412212Z Collecting pip-requirements-parser>=32.0.0 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0442282Z   Downloading pip_requirements_parser-32.0.1-py3-none-any.whl.metadata (9.3 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0656010Z Collecting requests>=2.31.0 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0685956Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0730378Z Requirement already satisfied: rich>=12.4 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from pip-audit) (15.0.0)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0906038Z Collecting tomli>=2.2.1 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.0938585Z   Downloading tomli-2.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1043864Z Collecting tomli-w>=1.2.0 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1075309Z   Downloading tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1233804Z Collecting platformdirs>=4.2.0 (from pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1264574Z   Downloading platformdirs-4.11.7-py3-none-any.whl.metadata (5.5 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1418016Z Collecting license-expression<31,>=30 (from cyclonedx-python-lib<12,>=5->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1448991Z   Downloading license_expression-30.4.4-py3-none-any.whl.metadata (11 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1645069Z Collecting packageurl-python<2,>=0.11 (from cyclonedx-python-lib<12,>=5->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1675112Z   Downloading packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1823801Z Collecting py-serializable<3.0.0,>=2.1.0 (from cyclonedx-python-lib<12,>=5->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1878338Z   Downloading py_serializable-2.1.0-py3-none-any.whl.metadata (4.3 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.1993065Z Collecting sortedcontainers<3.0.0,>=2.4.0 (from cyclonedx-python-lib<12,>=5->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2022244Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2152174Z Collecting boolean.py>=4.0 (from license-expression<31,>=30->cyclonedx-python-lib<12,>=5->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2184839Z   Downloading boolean_py-5.0-py3-none-any.whl.metadata (2.3 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2307773Z Collecting defusedxml<0.8.0,>=0.7.1 (from py-serializable<3.0.0,>=2.1.0->cyclonedx-python-lib<12,>=5->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2337638Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2418977Z Requirement already satisfied: msgpack<2.0.0,>=0.5.2 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit) (1.2.2)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2602749Z Collecting filelock>=3.8.0 (from CacheControl[filecache]>=0.13.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2633379Z   Downloading filelock-3.32.5-py3-none-any.whl.metadata (2.0 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2681498Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from pip-api>=0.0.28->pip-audit) (26.2.1)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2882094Z Collecting pyparsing (from pip-requirements-parser>=32.0.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.2912623Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4011244Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4045871Z   Downloading charset_normalizer-3.5.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4197300Z Collecting idna<4,>=2.5 (from requests>=2.31.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4226187Z   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4430236Z Collecting urllib3<3,>=1.26 (from requests>=2.31.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4460692Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4625163Z Collecting certifi>=2023.5.7 (from requests>=2.31.0->pip-audit)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4655361Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4715544Z Requirement already satisfied: markdown-it-py>=2.2.0 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from rich>=12.4->pip-audit) (4.2.0)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4720898Z Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from rich>=12.4->pip-audit) (2.21.0)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4738380Z Requirement already satisfied: mdurl~=0.1 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit) (0.1.2)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4809914Z Downloading pip_audit-2.10.1-py3-none-any.whl (62 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4862486Z Downloading cyclonedx_python_lib-11.12.0-py3-none-any.whl (529 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4951909Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.5/529.5 kB 67.2 MB/s  0:00:00
+Security Checks	Run pip-audit	2026-09-05T14:05:47.4981389Z Downloading license_expression-30.4.4-py3-none-any.whl (120 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5031642Z Downloading packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5079601Z Downloading py_serializable-2.1.0-py3-none-any.whl (23 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5127119Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5176538Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5227204Z Downloading boolean_py-5.0-py3-none-any.whl (26 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5277494Z Downloading cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5324497Z Downloading filelock-3.32.5-py3-none-any.whl (100 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5376305Z Downloading pip_api-0.0.34-py3-none-any.whl (120 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5425587Z Downloading pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5477024Z Downloading platformdirs-4.11.7-py3-none-any.whl (23 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5525306Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5579314Z Downloading charset_normalizer-3.5.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5631672Z Downloading idna-3.19-py3-none-any.whl (68 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5682340Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5734471Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5789141Z Downloading tomli-2.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (251 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5850999Z Downloading tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.5899253Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Security Checks	Run pip-audit	2026-09-05T14:05:47.6970660Z Installing collected packages: sortedcontainers, boolean.py, urllib3, tomli-w, tomli, pyparsing, platformdirs, pip-api, packageurl-python, license-expression, idna, filelock, defusedxml, charset_normalizer, certifi, requests, py-serializable, pip-requirements-parser, cyclonedx-python-lib, CacheControl, pip-audit
+Security Checks	Run pip-audit	2026-09-05T14:05:48.4865117Z 
+Security Checks	Run pip-audit	2026-09-05T14:05:48.4908360Z Successfully installed CacheControl-0.14.4 boolean.py-5.0 certifi-2026.7.22 charset_normalizer-3.5.1 cyclonedx-python-lib-11.12.0 defusedxml-0.7.1 filelock-3.32.5 idna-3.19 license-expression-30.4.4 packageurl-python-0.17.6 pip-api-0.0.34 pip-audit-2.10.1 pip-requirements-parser-32.0.1 platformdirs-4.11.7 py-serializable-2.1.0 pyparsing-3.3.2 requests-2.34.2 sortedcontainers-2.4.0 tomli-2.4.1 tomli-w-1.2.0 urllib3-2.7.0
+Security Checks	Run pip-audit	2026-09-05T14:05:49.9784413Z No known vulnerabilities found
+Security Checks	Run Bandit	﻿2026-09-05T14:05:50.0295358Z ##[group]Run pip install bandit
+Security Checks	Run Bandit	2026-09-05T14:05:50.0295733Z ^[[36;1mpip install bandit^[[0m
+Security Checks	Run Bandit	2026-09-05T14:05:50.0296011Z ^[[36;1mbandit -r . -x ./.venv || true^[[0m
+Security Checks	Run Bandit	2026-09-05T14:05:50.0333214Z shell: /usr/bin/bash -e {0}
+Security Checks	Run Bandit	2026-09-05T14:05:50.0333479Z env:
+Security Checks	Run Bandit	2026-09-05T14:05:50.0333683Z   AWS_REGION: ap-south-1
+Security Checks	Run Bandit	2026-09-05T14:05:50.0333944Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Run Bandit	2026-09-05T14:05:50.0334280Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run Bandit	2026-09-05T14:05:50.0335074Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Run Bandit	2026-09-05T14:05:50.0335528Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run Bandit	2026-09-05T14:05:50.0335918Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run Bandit	2026-09-05T14:05:50.0336326Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Run Bandit	2026-09-05T14:05:50.0336749Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Run Bandit	2026-09-05T14:05:50.0337085Z ##[endgroup]
+Security Checks	Run Bandit	2026-09-05T14:05:50.3633706Z Requirement already satisfied: bandit in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (1.9.4)
+Security Checks	Run Bandit	2026-09-05T14:05:50.3650771Z Requirement already satisfied: PyYAML>=5.3.1 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from bandit) (6.0.3)
+Security Checks	Run Bandit	2026-09-05T14:05:50.3656922Z Requirement already satisfied: stevedore>=1.20.0 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from bandit) (5.9.1)
+Security Checks	Run Bandit	2026-09-05T14:05:50.3661013Z Requirement already satisfied: rich in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from bandit) (15.0.0)
+Security Checks	Run Bandit	2026-09-05T14:05:50.3691370Z Requirement already satisfied: markdown-it-py>=2.2.0 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from rich->bandit) (4.2.0)
+Security Checks	Run Bandit	2026-09-05T14:05:50.3697777Z Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from rich->bandit) (2.21.0)
+Security Checks	Run Bandit	2026-09-05T14:05:50.3716003Z Requirement already satisfied: mdurl~=0.1 in /opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages (from markdown-it-py>=2.2.0->rich->bandit) (0.1.2)
+Security Checks	Run Bandit	2026-09-05T14:05:50.6035823Z [main]	INFO	profile include tests: None
+Security Checks	Run Bandit	2026-09-05T14:05:50.6036771Z [main]	INFO	profile exclude tests: None
+Security Checks	Run Bandit	2026-09-05T14:05:50.6037391Z [main]	INFO	cli include tests: None
+Security Checks	Run Bandit	2026-09-05T14:05:50.6037914Z [main]	INFO	cli exclude tests: None
+Security Checks	Run Bandit	2026-09-05T14:05:50.6039003Z [main]	INFO	running on Python 3.13.15
+Security Checks	Run Bandit	2026-09-05T14:05:50.6067376Z [tester]	WARNING	nosec encountered (B104), but no failed test on file ./app/app.py:19
+Security Checks	Run Bandit	2026-09-05T14:05:50.6071843Z Run started:2026-09-05 14:05:50.607048+00:00
+Security Checks	Run Bandit	2026-09-05T14:05:50.6072301Z 
+Security Checks	Run Bandit	2026-09-05T14:05:50.6072474Z Test results:
+Security Checks	Run Bandit	2026-09-05T14:05:50.6072907Z 	No issues identified.
+Security Checks	Run Bandit	2026-09-05T14:05:50.6073158Z 
+Security Checks	Run Bandit	2026-09-05T14:05:50.6073263Z Code scanned:
+Security Checks	Run Bandit	2026-09-05T14:05:50.6073523Z 	Total lines of code: 12
+Security Checks	Run Bandit	2026-09-05T14:05:50.6073833Z 	Total lines skipped (#nosec): 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6074403Z 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 1
+Security Checks	Run Bandit	2026-09-05T14:05:50.6075345Z 
+Security Checks	Run Bandit	2026-09-05T14:05:50.6075460Z Run metrics:
+Security Checks	Run Bandit	2026-09-05T14:05:50.6075732Z 	Total issues (by severity):
+Security Checks	Run Bandit	2026-09-05T14:05:50.6076035Z 		Undefined: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6076272Z 		Low: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6076496Z 		Medium: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6076721Z 		High: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6076973Z 	Total issues (by confidence):
+Security Checks	Run Bandit	2026-09-05T14:05:50.6077286Z 		Undefined: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6077527Z 		Low: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6077745Z 		Medium: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6077967Z 		High: 0
+Security Checks	Run Bandit	2026-09-05T14:05:50.6078194Z Files skipped (0):
+Security Checks	Trivy filesystem scan	﻿2026-09-05T14:05:50.6502973Z ##[group]Run aquasecurity/trivy-action@master
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6503333Z with:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6503540Z   scan-type: fs
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6503743Z   scan-ref: .
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6503935Z   format: table
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6504134Z   exit-code: 0
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6504334Z   ignore-unfixed: true
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6504765Z   severity: CRITICAL,HIGH
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6505009Z   vuln-type: os,library
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6505394Z   cache-dir: /home/runner/work/devsecops-pipeline/devsecops-pipeline/.cache/trivy
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6505822Z   list-all-pkgs: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6506039Z   version: v0.74.0
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6506245Z   cache: true
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6506448Z   skip-setup-trivy: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6508857Z   token-setup-trivy: ***
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6509298Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6509494Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6509739Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6510064Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6510537Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6510966Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6511346Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6511734Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6512126Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6512451Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6572348Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6701273Z ##[group]Run aquasecurity/setup-trivy@81e514348e19b6112ce2a7e3ecbafe19c1e1f567
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6701692Z with:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6701900Z   version: v0.74.0
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6702104Z   cache: true
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6704436Z   token: ***
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6704862Z   github-server-url: https://github.com
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6705146Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6705347Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6705600Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6705922Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6706353Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6706786Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6707169Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6707552Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6708017Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6708360Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6715786Z ##[start-action display=Binary dir;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.binary-dir]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6733200Z ##[group]Run # `path` is passed via env to avoid script injection. As a result, shell
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6733798Z ^[[36;1m# `path` is passed via env to avoid script injection. As a result, shell^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6734358Z ^[[36;1m# variables (e.g. $HOME) and `~` inside it are NOT expanded. We validate it to:^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6735289Z ^[[36;1m#   1. fail early with a clear message instead of silently creating a directory^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6735718Z ^[[36;1m#      literally named `$HOME`;^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6736109Z ^[[36;1m#   2. reject newlines, which could otherwise inject extra lines into the^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6736585Z ^[[36;1m#      `$GITHUB_OUTPUT` file (and thus poison the `dir` output).^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6736944Z ^[[36;1mcase "${INPUT_PATH}" in^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6737193Z ^[[36;1m  *'$'* | *'~'*)^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6738170Z ^[[36;1m    echo "::error::The 'path' input must be a literal path. Shell variables (e.g. \$HOME, \$USER) and '~' are not expanded. Use a GitHub expression that is resolved before the step runs, a relative path, or leave 'path' empty to use the default (\$HOME/.local/bin)." >&2^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6739178Z ^[[36;1m    exit 1^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6739600Z ^[[36;1m    ;;^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6739808Z ^[[36;1m  *[$'\n\r']*)^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6740152Z ^[[36;1m    echo "::error::The 'path' input must not contain newline characters." >&2^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6740538Z ^[[36;1m    exit 1^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6740734Z ^[[36;1m    ;;^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6740922Z ^[[36;1mesac^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6741300Z ^[[36;1m# Default path. Keep `$HOME/.local/bin` in sync with the `path` input description above.^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6741883Z ^[[36;1mecho "dir=${INPUT_PATH:-$HOME/.local/bin}/trivy-bin" >> "$GITHUB_OUTPUT"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6779851Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6780203Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6780400Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6780823Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6781147Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6781595Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6782045Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6782428Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6782818Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6783236Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6783566Z   INPUT_PATH: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6783767Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6871028Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.binary-dir;outcome=success;conclusion=success;duration_ms=15]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6875825Z ##[start-action display=Check the version for caching;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6882109Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6884413Z ##[start-action display=Restore Trivy binary from cache;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.cache]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6931589Z ##[group]Run actions/cache/restore@9255dc7a253b0ccc959486e2bca901246202afeb
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6931990Z with:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6932208Z   path: /home/runner/.local/bin/trivy-bin
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6932499Z   key: trivy-binary-v0.74.0-Linux-X64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6932775Z   enableCrossOsArchive: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6933029Z   fail-on-cache-miss: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6933268Z   lookup-only: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6933468Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6933656Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6933895Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6934207Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6934833Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6935299Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6935690Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6936082Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6936476Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:50.6936798Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:51.0191385Z Cache hit for: trivy-binary-v0.74.0-Linux-X64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.2616902Z Received 29421016 of 46198232 (63.7%), 28.0 MBs/sec
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.3800810Z Received 46198232 of 46198232 (100.0%), 39.4 MBs/sec
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.3801550Z Cache Size: ~44 MB (46198232 B)
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.3832501Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ca86f3b3-1a3d-4e0d-bee7-4dde66ef889e/cache.tzst -P -C /home/runner/work/devsecops-pipeline/devsecops-pipeline --use-compress-program unzstd
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6483397Z Cache restored successfully
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6581034Z Cache restored from key: trivy-binary-v0.74.0-Linux-X64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6670237Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=1978]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6675660Z ##[start-action display=Checkout install script;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_checkout]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6684225Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_checkout;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6689768Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_2]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6715282Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6720924Z ##[start-action display=Add Trivy binary to $GITHUB_PATH;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_3]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6747165Z ##[group]Run echo "${BINARY_DIR}" >> "$GITHUB_PATH"
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6747859Z ^[[36;1mecho "${BINARY_DIR}" >> "$GITHUB_PATH"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6801418Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6802046Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6802389Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6802835Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6803437Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6804230Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6805277Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6805996Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6806721Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6807461Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6808148Z   BINARY_DIR: /home/runner/.local/bin/trivy-bin
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6808753Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6893224Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__run_3;outcome=success;conclusion=success;duration_ms=17]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6895837Z ##[start-action display=Save Trivy binary to cache;id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_cache]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6902487Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6914298Z ##[end-action id=__aquasecurity_trivy-action.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=2034]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6916741Z ##[start-action display=Get current date;id=__aquasecurity_trivy-action.date]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6931150Z ##[group]Run echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6931588Z ^[[36;1mecho "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6964284Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6964955Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6965171Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6965430Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6965762Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6966234Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6966679Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6967073Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6967467Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6967893Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.6968269Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7042899Z ##[end-action id=__aquasecurity_trivy-action.date;outcome=success;conclusion=success;duration_ms=12]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7045314Z ##[start-action display=Restore DB from cache;id=__aquasecurity_trivy-action.__actions_cache]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7080351Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7080709Z with:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7081044Z   path: /home/runner/work/devsecops-pipeline/devsecops-pipeline/.cache/trivy
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7081626Z   key: cache-trivy-2026-09-05
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7081890Z   restore-keys: cache-trivy-
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7082153Z   enableCrossOsArchive: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7082407Z   fail-on-cache-miss: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7082653Z   lookup-only: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7082875Z   save-always: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7083076Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7083279Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7083521Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7083839Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7084295Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7085005Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7085407Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7085978Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7086381Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:52.7086716Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0311925Z Cache not found for input keys: cache-trivy-2026-09-05, cache-trivy-
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0376504Z ##[end-action id=__aquasecurity_trivy-action.__actions_cache;outcome=success;conclusion=success;duration_ms=333]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0379683Z ##[start-action display=Set GitHub Path;id=__aquasecurity_trivy-action.__run]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0396073Z ##[group]Run echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0396487Z ^[[36;1mecho "$GITHUB_ACTION_PATH" >> $GITHUB_PATH^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0432886Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0433237Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0433448Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0433699Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0434082Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0434765Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0435246Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0435664Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0436059Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0436453Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0436928Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/aquasecurity/trivy-action/master
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0437329Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0500862Z ##[end-action id=__aquasecurity_trivy-action.__run;outcome=success;conclusion=success;duration_ms=12]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0502934Z ##[start-action display=Clear Trivy Envs file;id=__aquasecurity_trivy-action.__run_2]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0517183Z ##[group]Run rm -f trivy_envs.txt
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0517498Z ^[[36;1mrm -f trivy_envs.txt^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0517760Z ^[[36;1mtouch trivy_envs.txt^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0550470Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0550869Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0551081Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0551336Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0551665Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0552127Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0552576Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0552969Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0553363Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0553764Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0554094Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0637101Z ##[end-action id=__aquasecurity_trivy-action.__run_2;outcome=success;conclusion=success;duration_ms=13]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0641395Z ##[start-action display=Set Trivy environment variables;id=__aquasecurity_trivy-action.__run_3]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0655883Z ##[group]Run # Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0656951Z ^[[36;1m# Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0657626Z ^[[36;1m# This limitation affects how we handle default values and empty inputs.^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0658178Z ^[[36;1m# For more information, see: https://github.com/actions/runner/issues/924^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0658586Z ^[[36;1m^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0658959Z ^[[36;1m# The following logic implements the configuration priority described in the README:^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0659407Z ^[[36;1m#^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0659598Z ^[[36;1m# Inputs^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0659818Z ^[[36;1m# Environment Variables^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0660198Z ^[[36;1m# Config File^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0660426Z ^[[36;1m# Defaults^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0660627Z ^[[36;1m#^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0661039Z ^[[36;1m# As noted above defaults are awkward to handle as GitHub Actions will inject those values as the input^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0661782Z ^[[36;1m# if the caller doesn't provide them, thus if the input matches the default we don't set it as we^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0662473Z ^[[36;1m# can't tell the difference.  Plus if we did set it when it was the default value then it could potentially^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0663218Z ^[[36;1m# override an external environment variable, or something in the callers configuration file, which then wouldn't^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0663825Z ^[[36;1m# match the configuration priority that is documented.^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0664188Z ^[[36;1mset_env_var_if_provided() {^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0664459Z ^[[36;1m  local var_name="$1"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0664987Z ^[[36;1m  local input_value="$2"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0665269Z ^[[36;1m  local default_value="$3"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0665523Z ^[[36;1m^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0665821Z ^[[36;1m  if [ -n "$input_value" ] && [ "$input_value" != "$default_value" ]; then^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0666323Z ^[[36;1m    # If action was provided with explicit input by the caller set that^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0666885Z ^[[36;1m    # Use printf %q to safely escape special characters and prevent command injection^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0667435Z ^[[36;1m    printf 'export %s=%q\n' "$var_name" "$input_value" >> trivy_envs.txt^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0667807Z ^[[36;1m  fi^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0668002Z ^[[36;1m}^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0668183Z ^[[36;1m^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0668485Z ^[[36;1m# Set environment variables, handling those with default values^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0669077Z ^[[36;1m# cf. https://aquasecurity.github.io/trivy/latest/docs/configuration/#environment-variables^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0669638Z ^[[36;1mset_env_var_if_provided "TRIVY_INPUT" "$INPUT_INPUT" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0670075Z ^[[36;1mset_env_var_if_provided "TRIVY_EXIT_CODE" "$INPUT_EXIT_CODE" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0670583Z ^[[36;1mset_env_var_if_provided "TRIVY_IGNORE_UNFIXED" "$INPUT_IGNORE_UNFIXED" "false"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0671127Z ^[[36;1mset_env_var_if_provided "TRIVY_PKG_TYPES" "$INPUT_VULN_TYPE" "os,library"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0671720Z ^[[36;1mset_env_var_if_provided "TRIVY_SEVERITY" "$INPUT_SEVERITY" "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0672287Z ^[[36;1mset_env_var_if_provided "TRIVY_FORMAT" "$INPUT_FORMAT" "table"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0672734Z ^[[36;1mset_env_var_if_provided "TRIVY_TEMPLATE" "$INPUT_TEMPLATE" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0673167Z ^[[36;1mset_env_var_if_provided "TRIVY_OUTPUT" "$INPUT_OUTPUT" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0673602Z ^[[36;1mset_env_var_if_provided "TRIVY_SKIP_DIRS" "$INPUT_SKIP_DIRS" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0674067Z ^[[36;1mset_env_var_if_provided "TRIVY_SKIP_FILES" "$INPUT_SKIP_FILES" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0674706Z ^[[36;1mset_env_var_if_provided "TRIVY_TIMEOUT" "$INPUT_TIMEOUT" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0675218Z ^[[36;1mset_env_var_if_provided "TRIVY_IGNORE_POLICY" "$INPUT_IGNORE_POLICY" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0675709Z ^[[36;1mset_env_var_if_provided "TRIVY_QUIET" "$INPUT_HIDE_PROGRESS" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0676335Z ^[[36;1mset_env_var_if_provided "TRIVY_LIST_ALL_PKGS" "$INPUT_LIST_ALL_PKGS" "false"^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0676832Z ^[[36;1mset_env_var_if_provided "TRIVY_SCANNERS" "$INPUT_SCANNERS" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0677276Z ^[[36;1mset_env_var_if_provided "TRIVY_CONFIG" "$INPUT_TRIVY_CONFIG" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0677723Z ^[[36;1mset_env_var_if_provided "TRIVY_TF_VARS" "$INPUT_TF_VARS" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0678176Z ^[[36;1mset_env_var_if_provided "TRIVY_DOCKER_HOST" "$INPUT_DOCKER_HOST" ""^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0712659Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0713013Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0713218Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0713469Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0713947Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0714391Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0715149Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0715553Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0715972Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0716368Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0716700Z   INPUT_INPUT: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0716911Z   INPUT_EXIT_CODE: 0
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0717134Z   INPUT_IGNORE_UNFIXED: true
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0717379Z   INPUT_VULN_TYPE: os,library
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0717627Z   INPUT_SEVERITY: CRITICAL,HIGH
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0717872Z   INPUT_FORMAT: table
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0718097Z   INPUT_TEMPLATE: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0718307Z   INPUT_OUTPUT: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0718516Z   INPUT_SKIP_DIRS: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0718726Z   INPUT_SKIP_FILES: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0718943Z   INPUT_TIMEOUT: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0719150Z   INPUT_IGNORE_POLICY: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0719390Z   INPUT_HIDE_PROGRESS: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0719626Z   INPUT_LIST_ALL_PKGS: false
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0719869Z   INPUT_SCANNERS: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0720075Z   INPUT_TRIVY_CONFIG: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0720286Z   INPUT_TF_VARS: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0720490Z   INPUT_DOCKER_HOST: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0720708Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0786211Z ##[end-action id=__aquasecurity_trivy-action.__run_3;outcome=success;conclusion=success;duration_ms=14]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0789362Z ##[start-action display=Run Trivy;id=__aquasecurity_trivy-action.__run_4]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0816186Z ##[group]Run entrypoint.sh
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0816453Z ^[[36;1mentrypoint.sh^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0849499Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0849848Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0850050Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0850313Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0850641Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0851089Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0851535Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0851928Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0852332Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0852723Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0853058Z   INPUT_SCAN_TYPE: fs
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0853277Z   INPUT_IMAGE_REF: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0853521Z   INPUT_SCAN_REF: .
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0853730Z   INPUT_TRIVYIGNORES: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0853949Z   INPUT_GITHUB_PAT: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0854180Z   INPUT_LIMIT_SEVERITIES_FOR_SARIF: 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0854873Z   TRIVY_CACHE_DIR: /home/runner/work/devsecops-pipeline/devsecops-pipeline/.cache/trivy
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0855326Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.0939616Z Running Trivy with options: trivy fs .
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.1482274Z 2026-09-05T14:05:53Z	INFO	[vulndb] Need to update DB
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.1483138Z 2026-09-05T14:05:53Z	INFO	[vulndb] Downloading vulnerability DB...
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:53.1483738Z 2026-09-05T14:05:53Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9831402Z 43.90 MiB / 110.98 MiB [----------------------->____________________________________] 39.56% ? p/s ?110.98 MiB / 110.98 MiB [--------------------------------------------------------->] 100.00% ? p/s ?110.98 MiB / 110.98 MiB [--------------------------------------------------------->] 100.00% ? p/s ?110.98 MiB / 110.98 MiB [------------------------------------------->] 100.00% 111.68 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [------------------------------------------->] 100.00% 111.68 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [------------------------------------------->] 100.00% 111.68 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [------------------------------------------->] 100.00% 104.48 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [------------------------------------------->] 100.00% 104.48 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [------------------------------------------->] 100.00% 104.48 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 97.74 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 97.74 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 97.74 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 91.43 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 91.43 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 91.43 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-------------------------------------------->] 100.00% 85.53 MiB p/s ETA 0s110.98 MiB / 110.98 MiB [-----------------------------------------------] 100.00% 34.91 MiB p/s 3.4s2026-09-05T14:05:57Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9840666Z 2026-09-05T14:05:57Z	INFO	[vuln] Vulnerability scanning is enabled
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9841430Z 2026-09-05T14:05:57Z	INFO	[secret] Secret scanning is enabled
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9842447Z 2026-09-05T14:05:57Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9843972Z 2026-09-05T14:05:57Z	INFO	[secret] Please see https://trivy.dev/docs/v0.74/guide/scanner/secret#recommendation for faster secret detection
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9953268Z 2026-09-05T14:05:57Z	INFO	Number of language-specific files	num=0
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9954684Z 2026-09-05T14:05:57Z	WARN	[report] Supported files for scanner(s) not found.	scanners=[vuln]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9955450Z 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9955601Z Report Summary
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9955826Z 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9956291Z ┌────────┬──────┬─────────────────┬─────────┐
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9956885Z │ Target │ Type │ Vulnerabilities │ Secrets │
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9957494Z ├────────┼──────┼─────────────────┼─────────┤
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9958475Z │   -    │  -   │        -        │    -    │
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9959063Z └────────┴──────┴─────────────────┴─────────┘
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9959494Z Legend:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9959794Z - '-': Not scanned
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9960186Z - '0': Clean (no security findings detected)
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9960517Z 
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:57.9961730Z 2026-09-05T14:05:57Z	INFO	[report] No issues detected with scanner(s).	scanners=[secret]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0010190Z ##[end-action id=__aquasecurity_trivy-action.__run_4;outcome=success;conclusion=success;duration_ms=4921]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0012595Z ##[start-action display=Remove Trivy Envs file;id=__aquasecurity_trivy-action.__run_5]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0031183Z ##[group]Run rm -f trivy_envs.txt
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0031503Z ^[[36;1mrm -f trivy_envs.txt^[[0m
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0068528Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0068879Z env:
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0069085Z   AWS_REGION: ap-south-1
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0069515Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0069839Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0070284Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0070718Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0071102Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0071519Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0071927Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0072280Z ##[endgroup]
+Security Checks	Trivy filesystem scan	2026-09-05T14:05:58.0145177Z ##[end-action id=__aquasecurity_trivy-action.__run_5;outcome=success;conclusion=success;duration_ms=13]
+Security Checks	Build Docker image	﻿2026-09-05T14:05:58.0168628Z ##[group]Run docker build -t devsecops-app:latest .
+Security Checks	Build Docker image	2026-09-05T14:05:58.0169036Z ^[[36;1mdocker build -t devsecops-app:latest .^[[0m
+Security Checks	Build Docker image	2026-09-05T14:05:58.0201588Z shell: /usr/bin/bash -e {0}
+Security Checks	Build Docker image	2026-09-05T14:05:58.0201841Z env:
+Security Checks	Build Docker image	2026-09-05T14:05:58.0202047Z   AWS_REGION: ap-south-1
+Security Checks	Build Docker image	2026-09-05T14:05:58.0202294Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Build Docker image	2026-09-05T14:05:58.0202615Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Build Docker image	2026-09-05T14:05:58.0203052Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Build Docker image	2026-09-05T14:05:58.0203490Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Build Docker image	2026-09-05T14:05:58.0203870Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Build Docker image	2026-09-05T14:05:58.0204256Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Build Docker image	2026-09-05T14:05:58.0204901Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Build Docker image	2026-09-05T14:05:58.0205245Z ##[endgroup]
+Security Checks	Build Docker image	2026-09-05T14:05:58.5182672Z #0 building with "default" instance using docker driver
+Security Checks	Build Docker image	2026-09-05T14:05:58.5183307Z 
+Security Checks	Build Docker image	2026-09-05T14:05:58.5183493Z #1 [internal] load build definition from Dockerfile
+Security Checks	Build Docker image	2026-09-05T14:05:58.5183900Z #1 transferring dockerfile: 338B done
+Security Checks	Build Docker image	2026-09-05T14:05:58.5184221Z #1 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:05:58.5184362Z 
+Security Checks	Build Docker image	2026-09-05T14:05:58.5184891Z #2 [internal] load metadata for docker.io/library/python:3.13-slim
+Security Checks	Build Docker image	2026-09-05T14:05:58.6894586Z #2 ...
+Security Checks	Build Docker image	2026-09-05T14:05:58.6895138Z 
+Security Checks	Build Docker image	2026-09-05T14:05:58.6895496Z #3 [auth] library/python:pull token for registry-1.docker.io
+Security Checks	Build Docker image	2026-09-05T14:05:58.6896024Z #3 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:05:58.8397552Z 
+Security Checks	Build Docker image	2026-09-05T14:05:58.8397973Z #2 [internal] load metadata for docker.io/library/python:3.13-slim
+Security Checks	Build Docker image	2026-09-05T14:05:59.1057226Z #2 DONE 0.7s
+Security Checks	Build Docker image	2026-09-05T14:05:59.2235515Z 
+Security Checks	Build Docker image	2026-09-05T14:05:59.2236476Z #4 [internal] load .dockerignore
+Security Checks	Build Docker image	2026-09-05T14:05:59.2237022Z #4 transferring context: 2B done
+Security Checks	Build Docker image	2026-09-05T14:05:59.2237466Z #4 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:05:59.2237640Z 
+Security Checks	Build Docker image	2026-09-05T14:05:59.2237759Z #5 [internal] load build context
+Security Checks	Build Docker image	2026-09-05T14:05:59.2238090Z #5 transferring context: 515B done
+Security Checks	Build Docker image	2026-09-05T14:05:59.2238389Z #5 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:05:59.2238514Z 
+Security Checks	Build Docker image	2026-09-05T14:05:59.2238943Z #6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285
+Security Checks	Build Docker image	2026-09-05T14:05:59.2239905Z #6 resolve docker.io/library/python:3.13-slim@sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285 done
+Security Checks	Build Docker image	2026-09-05T14:05:59.2240780Z #6 sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285 10.37kB / 10.37kB done
+Security Checks	Build Docker image	2026-09-05T14:05:59.2241566Z #6 sha256:cc9dffa47c8294ba9bb795a8dfaeb7b76f2b30acade2c52a461a2999d127eb00 1.75kB / 1.75kB done
+Security Checks	Build Docker image	2026-09-05T14:05:59.2242250Z #6 sha256:51cce855bb6e44a8ff6ed0f46ded8850f246bfc7549801459f83fc34b80c210f 5.52kB / 5.52kB done
+Security Checks	Build Docker image	2026-09-05T14:05:59.2242900Z #6 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 14.68MB / 29.79MB 0.1s
+Security Checks	Build Docker image	2026-09-05T14:05:59.2243567Z #6 sha256:5bbcb35ea63ee8dd9b96c06b0f78b33c9a32e06e5b14e1bfeb46b498a93edb5d 0B / 4.27MB 0.1s
+Security Checks	Build Docker image	2026-09-05T14:05:59.2244222Z #6 sha256:237e12970bdcabcdd95dab0f8dc59cda22b450156ee0bd01c58e0cf3b9c43885 0B / 11.91MB 0.1s
+Security Checks	Build Docker image	2026-09-05T14:05:59.3239048Z #6 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.1s done
+Security Checks	Build Docker image	2026-09-05T14:05:59.3240665Z #6 sha256:5bbcb35ea63ee8dd9b96c06b0f78b33c9a32e06e5b14e1bfeb46b498a93edb5d 4.27MB / 4.27MB 0.1s done
+Security Checks	Build Docker image	2026-09-05T14:05:59.3242111Z #6 sha256:237e12970bdcabcdd95dab0f8dc59cda22b450156ee0bd01c58e0cf3b9c43885 11.53MB / 11.91MB 0.2s
+Security Checks	Build Docker image	2026-09-05T14:05:59.3243475Z #6 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be
+Security Checks	Build Docker image	2026-09-05T14:05:59.3244981Z #6 sha256:9b83eae799b831086df12d4da65c2edb0e6c713caa4312455bc8ee4b1a256c39 249B / 249B 0.2s
+Security Checks	Build Docker image	2026-09-05T14:05:59.5075641Z #6 sha256:237e12970bdcabcdd95dab0f8dc59cda22b450156ee0bd01c58e0cf3b9c43885 11.91MB / 11.91MB 0.2s done
+Security Checks	Build Docker image	2026-09-05T14:05:59.5077649Z #6 sha256:9b83eae799b831086df12d4da65c2edb0e6c713caa4312455bc8ee4b1a256c39 249B / 249B 0.2s done
+Security Checks	Build Docker image	2026-09-05T14:06:00.2518246Z #6 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.9s done
+Security Checks	Build Docker image	2026-09-05T14:06:00.2519468Z #6 extracting sha256:5bbcb35ea63ee8dd9b96c06b0f78b33c9a32e06e5b14e1bfeb46b498a93edb5d
+Security Checks	Build Docker image	2026-09-05T14:06:00.5442545Z #6 extracting sha256:5bbcb35ea63ee8dd9b96c06b0f78b33c9a32e06e5b14e1bfeb46b498a93edb5d 0.1s done
+Security Checks	Build Docker image	2026-09-05T14:06:03.7295245Z #6 extracting sha256:237e12970bdcabcdd95dab0f8dc59cda22b450156ee0bd01c58e0cf3b9c43885
+Security Checks	Build Docker image	2026-09-05T14:06:04.3429202Z #6 extracting sha256:237e12970bdcabcdd95dab0f8dc59cda22b450156ee0bd01c58e0cf3b9c43885 0.5s done
+Security Checks	Build Docker image	2026-09-05T14:06:04.3430370Z #6 extracting sha256:9b83eae799b831086df12d4da65c2edb0e6c713caa4312455bc8ee4b1a256c39 done
+Security Checks	Build Docker image	2026-09-05T14:06:04.3431430Z #6 DONE 5.2s
+Security Checks	Build Docker image	2026-09-05T14:06:04.5106425Z 
+Security Checks	Build Docker image	2026-09-05T14:06:04.5106960Z #7 [2/5] WORKDIR /app
+Security Checks	Build Docker image	2026-09-05T14:06:04.5107398Z #7 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:06:04.5107539Z 
+Security Checks	Build Docker image	2026-09-05T14:06:04.5107651Z #8 [3/5] COPY requirements.txt .
+Security Checks	Build Docker image	2026-09-05T14:06:04.5107965Z #8 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:06:04.5108105Z 
+Security Checks	Build Docker image	2026-09-05T14:06:04.5108884Z #9 [4/5] RUN pip install --no-cache-dir --upgrade pip     && pip install --no-cache-dir -r requirements.txt     && pip install --no-cache-dir --upgrade "msgpack>=1.2.1" "setuptools>=78.1.1"
+Security Checks	Build Docker image	2026-09-05T14:06:05.7632020Z #9 1.403 Requirement already satisfied: pip in /usr/local/lib/python3.13/site-packages (26.2.1)
+Security Checks	Build Docker image	2026-09-05T14:06:05.8910219Z #9 1.531 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Security Checks	Build Docker image	2026-09-05T14:06:06.3263036Z #9 1.966 Collecting Flask (from -r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.4846956Z #9 2.012   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.4847831Z #9 2.026 Collecting bandit (from -r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.4848387Z #9 2.036   Downloading bandit-1.9.4-py3-none-any.whl.metadata (7.1 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.4848965Z #9 2.046 Collecting jaraco.context>=6.1.0 (from -r requirements.txt (line 3))
+Security Checks	Build Docker image	2026-09-05T14:06:06.4849576Z #9 2.056   Downloading jaraco_context-6.1.2-py3-none-any.whl.metadata (4.2 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.4850134Z #9 2.125 Collecting msgpack>=1.2.1 (from -r requirements.txt (line 4))
+Security Checks	Build Docker image	2026-09-05T14:06:06.5937977Z #9 2.135   Downloading msgpack-1.2.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.5938967Z #9 2.197 Collecting setuptools>=78.1.1 (from -r requirements.txt (line 5))
+Security Checks	Build Docker image	2026-09-05T14:06:06.5939560Z #9 2.207   Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.5940070Z #9 2.223 Collecting wheel>=0.46.2 (from -r requirements.txt (line 6))
+Security Checks	Build Docker image	2026-09-05T14:06:06.5940555Z #9 2.234   Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.7123727Z #9 2.242 Collecting blinker>=1.9.0 (from Flask->-r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.7125258Z #9 2.251   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.7125976Z #9 2.263 Collecting click>=8.1.3 (from Flask->-r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.7126668Z #9 2.273   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.7127400Z #9 2.280 Collecting itsdangerous>=2.2.0 (from Flask->-r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.7128154Z #9 2.293   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.7128865Z #9 2.302 Collecting jinja2>=3.1.2 (from Flask->-r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.7129535Z #9 2.312   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.7130233Z #9 2.352 Collecting markupsafe>=2.1.1 (from Flask->-r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.8375446Z #9 2.362   Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.8377300Z #9 2.376 Collecting werkzeug>=3.1.0 (from Flask->-r requirements.txt (line 1))
+Security Checks	Build Docker image	2026-09-05T14:06:06.8378491Z #9 2.386   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.8379794Z #9 2.417 Collecting PyYAML>=5.3.1 (from bandit->-r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.8381502Z #9 2.427   Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.8383121Z #9 2.440 Collecting stevedore>=1.20.0 (from bandit->-r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.8384460Z #9 2.450   Downloading stevedore-5.9.1-py3-none-any.whl.metadata (2.3 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.8385700Z #9 2.477 Collecting rich (from bandit->-r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.9494070Z #9 2.488   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.9495081Z #9 2.502 Collecting packaging>=24.0 (from wheel>=0.46.2->-r requirements.txt (line 6))
+Security Checks	Build Docker image	2026-09-05T14:06:06.9495732Z #9 2.512   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.9496358Z #9 2.525 Collecting markdown-it-py>=2.2.0 (from rich->bandit->-r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.9496999Z #9 2.535   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.9497639Z #9 2.551 Collecting pygments<3.0.0,>=2.13.0 (from rich->bandit->-r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.9498251Z #9 2.561   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.9498907Z #9 2.567 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->bandit->-r requirements.txt (line 2))
+Security Checks	Build Docker image	2026-09-05T14:06:06.9499558Z #9 2.577   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:06.9500052Z #9 2.589 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.0539114Z #9 2.612 Downloading bandit-1.9.4-py3-none-any.whl (134 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.0540065Z #9 2.625 Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.0541555Z #9 2.635 Downloading msgpack-1.2.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (417 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.0542959Z #9 2.656 Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.0544346Z #9 2.674    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 38.3 MB/s  0:00:00
+Security Checks	Build Docker image	2026-09-05T14:06:07.0545474Z #9 2.684 Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.0545987Z #9 2.694 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1601582Z #9 2.704 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1602514Z #9 2.714 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1603021Z #9 2.724 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1603820Z #9 2.734 Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1605769Z #9 2.745 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1606959Z #9 2.755 Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1608513Z #9 2.759    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 233.4 MB/s  0:00:00
+Security Checks	Build Docker image	2026-09-05T14:06:07.1609332Z #9 2.769 Downloading stevedore-5.9.1-py3-none-any.whl (54 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1610090Z #9 2.779 Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1610921Z #9 2.790 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.1611654Z #9 2.800 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.2683044Z #9 2.804    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 607.5 MB/s  0:00:00
+Security Checks	Build Docker image	2026-09-05T14:06:07.2683993Z #9 2.814 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.2685429Z #9 2.824 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Security Checks	Build Docker image	2026-09-05T14:06:07.2687533Z #9 2.908 Installing collected packages: stevedore, setuptools, PyYAML, pygments, packaging, msgpack, mdurl, markupsafe, jaraco.context, itsdangerous, click, blinker, wheel, werkzeug, markdown-it-py, jinja2, rich, Flask, bandit
+Security Checks	Build Docker image	2026-09-05T14:06:09.3012989Z #9 4.941 
+Security Checks	Build Docker image	2026-09-05T14:06:09.4547428Z #9 4.944 Successfully installed Flask-3.1.3 PyYAML-6.0.3 bandit-1.9.4 blinker-1.9.0 click-8.5.0 itsdangerous-2.2.0 jaraco.context-6.1.2 jinja2-3.1.6 markdown-it-py-4.2.0 markupsafe-3.0.3 mdurl-0.1.2 msgpack-1.2.2 packaging-26.3 pygments-2.21.0 rich-15.0.0 setuptools-84.0.0 stevedore-5.9.1 werkzeug-3.1.8 wheel-0.48.0
+Security Checks	Build Docker image	2026-09-05T14:06:09.4550442Z #9 4.944 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Security Checks	Build Docker image	2026-09-05T14:06:09.7233550Z #9 5.363 Requirement already satisfied: msgpack>=1.2.1 in /usr/local/lib/python3.13/site-packages (1.2.2)
+Security Checks	Build Docker image	2026-09-05T14:06:09.8530298Z #9 5.493 Requirement already satisfied: setuptools>=78.1.1 in /usr/local/lib/python3.13/site-packages (84.0.0)
+Security Checks	Build Docker image	2026-09-05T14:06:09.9566602Z #9 5.596 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Security Checks	Build Docker image	2026-09-05T14:06:10.0693180Z #9 DONE 5.7s
+Security Checks	Build Docker image	2026-09-05T14:06:10.2346119Z 
+Security Checks	Build Docker image	2026-09-05T14:06:10.2346943Z #10 [5/5] COPY app/ .
+Security Checks	Build Docker image	2026-09-05T14:06:10.2347580Z #10 DONE 0.0s
+Security Checks	Build Docker image	2026-09-05T14:06:10.2347974Z 
+Security Checks	Build Docker image	2026-09-05T14:06:10.2348325Z #11 exporting to image
+Security Checks	Build Docker image	2026-09-05T14:06:10.2348958Z #11 exporting layers
+Security Checks	Build Docker image	2026-09-05T14:06:11.0129623Z #11 exporting layers 0.9s done
+Security Checks	Build Docker image	2026-09-05T14:06:11.0291470Z #11 writing image sha256:6f1901f654e85c6beb073a13dab1e8009cdafeb9c31b4e8c11989d9434d5d591 done
+Security Checks	Build Docker image	2026-09-05T14:06:11.0292366Z #11 naming to docker.io/library/devsecops-app:latest done
+Security Checks	Build Docker image	2026-09-05T14:06:11.0292887Z #11 DONE 0.9s
+Security Checks	Trivy container scan	﻿2026-09-05T14:06:11.0525456Z ##[warning]Unexpected input(s) 'ignorefile', valid inputs are ['scan-type', 'image-ref', 'input', 'scan-ref', 'exit-code', 'ignore-unfixed', 'vuln-type', 'severity', 'format', 'template', 'output', 'skip-dirs', 'skip-files', 'cache-dir', 'timeout', 'ignore-policy', 'hide-progress', 'list-all-pkgs', 'scanners', 'trivyignores', 'github-pat', 'trivy-config', 'tf-vars', 'limit-severities-for-sarif', 'docker-host', 'version', 'cache', 'skip-setup-trivy', 'token-setup-trivy']
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0538031Z ##[group]Run aquasecurity/trivy-action@master
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0538327Z with:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0538537Z   image-ref: devsecops-app:latest
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0538810Z   format: table
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0539021Z   severity: CRITICAL,HIGH
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0539255Z   ignore-unfixed: true
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0539482Z   ignorefile: .trivyignore
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0539713Z   exit-code: 1
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0539912Z   scan-type: image
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0540114Z   scan-ref: .
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0540314Z   vuln-type: os,library
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0540863Z   cache-dir: /home/runner/work/devsecops-pipeline/devsecops-pipeline/.cache/trivy
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0541293Z   list-all-pkgs: false
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0541511Z   version: v0.74.0
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0541713Z   cache: true
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0541915Z   skip-setup-trivy: false
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0544267Z   token-setup-trivy: ***
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0544675Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0544882Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0545132Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0545457Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0546085Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0546520Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0546916Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0547312Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0547707Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0548040Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0554465Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0658744Z ##[group]Run aquasecurity/setup-trivy@81e514348e19b6112ce2a7e3ecbafe19c1e1f567
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0659161Z with:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0659352Z   version: v0.74.0
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0659555Z   cache: true
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0661871Z   token: ***
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0662112Z   github-server-url: https://github.com
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0662394Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0662592Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0662856Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0663182Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0663622Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0664062Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0664458Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0665024Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0665426Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0665759Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0671924Z ##[start-action display=Binary dir;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.binary-dir]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0685457Z ##[group]Run # `path` is passed via env to avoid script injection. As a result, shell
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0686023Z ^[[36;1m# `path` is passed via env to avoid script injection. As a result, shell^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0686555Z ^[[36;1m# variables (e.g. $HOME) and `~` inside it are NOT expanded. We validate it to:^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0687106Z ^[[36;1m#   1. fail early with a clear message instead of silently creating a directory^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0687528Z ^[[36;1m#      literally named `$HOME`;^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0687923Z ^[[36;1m#   2. reject newlines, which could otherwise inject extra lines into the^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0688586Z ^[[36;1m#      `$GITHUB_OUTPUT` file (and thus poison the `dir` output).^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0688954Z ^[[36;1mcase "${INPUT_PATH}" in^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0689211Z ^[[36;1m  *'$'* | *'~'*)^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0690176Z ^[[36;1m    echo "::error::The 'path' input must be a literal path. Shell variables (e.g. \$HOME, \$USER) and '~' are not expanded. Use a GitHub expression that is resolved before the step runs, a relative path, or leave 'path' empty to use the default (\$HOME/.local/bin)." >&2^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0691176Z ^[[36;1m    exit 1^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0691396Z ^[[36;1m    ;;^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0691600Z ^[[36;1m  *[$'\n\r']*)^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0691955Z ^[[36;1m    echo "::error::The 'path' input must not contain newline characters." >&2^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0692346Z ^[[36;1m    exit 1^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0692547Z ^[[36;1m    ;;^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0692740Z ^[[36;1mesac^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0693126Z ^[[36;1m# Default path. Keep `$HOME/.local/bin` in sync with the `path` input description above.^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0693694Z ^[[36;1mecho "dir=${INPUT_PATH:-$HOME/.local/bin}/trivy-bin" >> "$GITHUB_OUTPUT"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0730248Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0730603Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0730803Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0731050Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0731375Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0731829Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0732427Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0732815Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0733211Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0733605Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0733941Z   INPUT_PATH: 
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0734138Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0798837Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.binary-dir;outcome=success;conclusion=success;duration_ms=12]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0801007Z ##[start-action display=Check the version for caching;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0805921Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0807973Z ##[start-action display=Restore Trivy binary from cache;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.cache]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0839288Z ##[group]Run actions/cache/restore@9255dc7a253b0ccc959486e2bca901246202afeb
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0839677Z with:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0839899Z   path: /home/runner/.local/bin/trivy-bin
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0840201Z   key: trivy-binary-v0.74.0-Linux-X64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0840487Z   enableCrossOsArchive: false
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0840757Z   fail-on-cache-miss: false
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0841002Z   lookup-only: false
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0841208Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0841400Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0841638Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0841955Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0842393Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0842845Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0843238Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0843639Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0844034Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:11.0844362Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:11.4052936Z Cache hit for: trivy-binary-v0.74.0-Linux-X64
+Security Checks	Trivy container scan	2026-09-05T14:06:12.6405561Z Received 25165824 of 46198232 (54.5%), 24.0 MBs/sec
+Security Checks	Trivy container scan	2026-09-05T14:06:12.8617803Z Received 46198232 of 46198232 (100.0%), 36.1 MBs/sec
+Security Checks	Trivy container scan	2026-09-05T14:06:12.8620630Z Cache Size: ~44 MB (46198232 B)
+Security Checks	Trivy container scan	2026-09-05T14:06:12.8667953Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7b48bd29-8327-4436-9786-451f8cbfb514/cache.tzst -P -C /home/runner/work/devsecops-pipeline/devsecops-pipeline --use-compress-program unzstd
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1486532Z Cache restored successfully
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1588036Z Cache restored from key: trivy-binary-v0.74.0-Linux-X64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1666706Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.cache;outcome=success;conclusion=success;duration_ms=2085]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1669546Z ##[start-action display=Checkout install script;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__actions_checkout]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1675087Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__actions_checkout;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1677808Z ##[start-action display=Install Trivy;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_2]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1682013Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1684464Z ##[start-action display=Add Trivy binary to $GITHUB_PATH;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_3]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1700790Z ##[group]Run echo "${BINARY_DIR}" >> "$GITHUB_PATH"
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1701166Z ^[[36;1mecho "${BINARY_DIR}" >> "$GITHUB_PATH"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1738189Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1738723Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1738933Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1739199Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1739532Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1740002Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1740451Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1740859Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1741262Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1741660Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1742031Z   BINARY_DIR: /home/runner/.local/bin/trivy-bin
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1742324Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1805730Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__run_3;outcome=success;conclusion=success;duration_ms=11]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1808151Z ##[start-action display=Save Trivy binary to cache;id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__actions_cache]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1814915Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1819612Z ##[end-action id=__aquasecurity_trivy-action_2.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=2126]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1821663Z ##[start-action display=Get current date;id=__aquasecurity_trivy-action_2.date]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1835859Z ##[group]Run echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1836296Z ^[[36;1mecho "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1869240Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1869599Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1869815Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1870077Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1870415Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1870886Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1871332Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1871733Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1872134Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1872717Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1873068Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1950612Z ##[end-action id=__aquasecurity_trivy-action_2.date;outcome=success;conclusion=success;duration_ms=12]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.1952689Z ##[start-action display=Restore DB from cache;id=__aquasecurity_trivy-action_2.__actions_cache]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2003133Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2003497Z with:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2003833Z   path: /home/runner/work/devsecops-pipeline/devsecops-pipeline/.cache/trivy
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2004274Z   key: cache-trivy-2026-09-05
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2004789Z   restore-keys: cache-trivy-
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2005082Z   enableCrossOsArchive: false
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2005344Z   fail-on-cache-miss: false
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2005590Z   lookup-only: false
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2005817Z   save-always: false
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2006023Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2006226Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2006479Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2006801Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2007244Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2007682Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2008073Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2008471Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2008870Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.2009396Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5160428Z Cache not found for input keys: cache-trivy-2026-09-05, cache-trivy-
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5221605Z ##[end-action id=__aquasecurity_trivy-action_2.__actions_cache;outcome=success;conclusion=success;duration_ms=326]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5226572Z ##[start-action display=Set GitHub Path;id=__aquasecurity_trivy-action_2.__run]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5248948Z ##[group]Run echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5249658Z ^[[36;1mecho "$GITHUB_ACTION_PATH" >> $GITHUB_PATH^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5290637Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5291006Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5291224Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5291501Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5291843Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5292311Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5292781Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5293185Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5293587Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5293993Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5294609Z   GITHUB_ACTION_PATH: /home/runner/work/_actions/aquasecurity/trivy-action/master
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5295037Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5371180Z ##[end-action id=__aquasecurity_trivy-action_2.__run;outcome=success;conclusion=success;duration_ms=14]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5373700Z ##[start-action display=Clear Trivy Envs file;id=__aquasecurity_trivy-action_2.__run_2]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5390079Z ##[group]Run rm -f trivy_envs.txt
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5390385Z ^[[36;1mrm -f trivy_envs.txt^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5390643Z ^[[36;1mtouch trivy_envs.txt^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5423245Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5423623Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5423828Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5424086Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5424425Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5425164Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5425638Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5426219Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5426624Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5427030Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5427365Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5513839Z ##[end-action id=__aquasecurity_trivy-action_2.__run_2;outcome=success;conclusion=success;duration_ms=13]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5520892Z ##[start-action display=Set Trivy environment variables;id=__aquasecurity_trivy-action_2.__run_3]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5545504Z ##[group]Run # Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5547160Z ^[[36;1m# Note: There is currently no way to distinguish between undefined variables and empty strings in GitHub Actions.^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5548408Z ^[[36;1m# This limitation affects how we handle default values and empty inputs.^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5549428Z ^[[36;1m# For more information, see: https://github.com/actions/runner/issues/924^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5550177Z ^[[36;1m^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5550857Z ^[[36;1m# The following logic implements the configuration priority described in the README:^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5551692Z ^[[36;1m#^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5552055Z ^[[36;1m# Inputs^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5552459Z ^[[36;1m# Environment Variables^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5553017Z ^[[36;1m# Config File^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5553438Z ^[[36;1m# Defaults^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5553837Z ^[[36;1m#^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5554932Z ^[[36;1m# As noted above defaults are awkward to handle as GitHub Actions will inject those values as the input^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5556514Z ^[[36;1m# if the caller doesn't provide them, thus if the input matches the default we don't set it as we^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5557817Z ^[[36;1m# can't tell the difference.  Plus if we did set it when it was the default value then it could potentially^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5559274Z ^[[36;1m# override an external environment variable, or something in the callers configuration file, which then wouldn't^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5560445Z ^[[36;1m# match the configuration priority that is documented.^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5561102Z ^[[36;1mset_env_var_if_provided() {^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5561618Z ^[[36;1m  local var_name="$1"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5562087Z ^[[36;1m  local input_value="$2"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5562578Z ^[[36;1m  local default_value="$3"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5563050Z ^[[36;1m^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5563590Z ^[[36;1m  if [ -n "$input_value" ] && [ "$input_value" != "$default_value" ]; then^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5564510Z ^[[36;1m    # If action was provided with explicit input by the caller set that^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5565788Z ^[[36;1m    # Use printf %q to safely escape special characters and prevent command injection^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5566801Z ^[[36;1m    printf 'export %s=%q\n' "$var_name" "$input_value" >> trivy_envs.txt^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5567512Z ^[[36;1m  fi^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5567870Z ^[[36;1m}^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5568237Z ^[[36;1m^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5568764Z ^[[36;1m# Set environment variables, handling those with default values^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5569882Z ^[[36;1m# cf. https://aquasecurity.github.io/trivy/latest/docs/configuration/#environment-variables^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5570936Z ^[[36;1mset_env_var_if_provided "TRIVY_INPUT" "$INPUT_INPUT" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5571747Z ^[[36;1mset_env_var_if_provided "TRIVY_EXIT_CODE" "$INPUT_EXIT_CODE" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5572922Z ^[[36;1mset_env_var_if_provided "TRIVY_IGNORE_UNFIXED" "$INPUT_IGNORE_UNFIXED" "false"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5573988Z ^[[36;1mset_env_var_if_provided "TRIVY_PKG_TYPES" "$INPUT_VULN_TYPE" "os,library"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5575353Z ^[[36;1mset_env_var_if_provided "TRIVY_SEVERITY" "$INPUT_SEVERITY" "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5576422Z ^[[36;1mset_env_var_if_provided "TRIVY_FORMAT" "$INPUT_FORMAT" "table"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5577816Z ^[[36;1mset_env_var_if_provided "TRIVY_TEMPLATE" "$INPUT_TEMPLATE" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5578656Z ^[[36;1mset_env_var_if_provided "TRIVY_OUTPUT" "$INPUT_OUTPUT" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5579485Z ^[[36;1mset_env_var_if_provided "TRIVY_SKIP_DIRS" "$INPUT_SKIP_DIRS" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5580470Z ^[[36;1mset_env_var_if_provided "TRIVY_SKIP_FILES" "$INPUT_SKIP_FILES" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5581319Z ^[[36;1mset_env_var_if_provided "TRIVY_TIMEOUT" "$INPUT_TIMEOUT" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5582204Z ^[[36;1mset_env_var_if_provided "TRIVY_IGNORE_POLICY" "$INPUT_IGNORE_POLICY" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5583132Z ^[[36;1mset_env_var_if_provided "TRIVY_QUIET" "$INPUT_HIDE_PROGRESS" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5584080Z ^[[36;1mset_env_var_if_provided "TRIVY_LIST_ALL_PKGS" "$INPUT_LIST_ALL_PKGS" "false"^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5585295Z ^[[36;1mset_env_var_if_provided "TRIVY_SCANNERS" "$INPUT_SCANNERS" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5586164Z ^[[36;1mset_env_var_if_provided "TRIVY_CONFIG" "$INPUT_TRIVY_CONFIG" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5587011Z ^[[36;1mset_env_var_if_provided "TRIVY_TF_VARS" "$INPUT_TF_VARS" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5587883Z ^[[36;1mset_env_var_if_provided "TRIVY_DOCKER_HOST" "$INPUT_DOCKER_HOST" ""^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5640847Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5641488Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5641850Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5642320Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5642910Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5643706Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5644983Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5645713Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5646428Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5647165Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5647796Z   INPUT_INPUT: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5648168Z   INPUT_EXIT_CODE: 1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5648568Z   INPUT_IGNORE_UNFIXED: true
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5649025Z   INPUT_VULN_TYPE: os,library
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5649490Z   INPUT_SEVERITY: CRITICAL,HIGH
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5649966Z   INPUT_FORMAT: table
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5650351Z   INPUT_TEMPLATE: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5650731Z   INPUT_OUTPUT: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5651116Z   INPUT_SKIP_DIRS: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5651499Z   INPUT_SKIP_FILES: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5651882Z   INPUT_TIMEOUT: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5652274Z   INPUT_IGNORE_POLICY: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5652706Z   INPUT_HIDE_PROGRESS: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5653245Z   INPUT_LIST_ALL_PKGS: false
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5653709Z   INPUT_SCANNERS: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5654097Z   INPUT_TRIVY_CONFIG: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5654761Z   INPUT_TF_VARS: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5655394Z   INPUT_DOCKER_HOST: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5655697Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5726975Z ##[end-action id=__aquasecurity_trivy-action_2.__run_3;outcome=success;conclusion=success;duration_ms=20]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5731726Z ##[start-action display=Run Trivy;id=__aquasecurity_trivy-action_2.__run_4]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5755228Z ##[group]Run entrypoint.sh
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5755722Z ^[[36;1mentrypoint.sh^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5804219Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5805273Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5805643Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5806090Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5806663Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5807455Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5808263Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5808991Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5809699Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5810391Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5811256Z   INPUT_SCAN_TYPE: image
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5811715Z   INPUT_IMAGE_REF: devsecops-app:latest
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5812237Z   INPUT_SCAN_REF: .
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5812630Z   INPUT_TRIVYIGNORES: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5813035Z   INPUT_GITHUB_PAT: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5813443Z   INPUT_LIMIT_SEVERITIES_FOR_SARIF: 
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5814216Z   TRIVY_CACHE_DIR: /home/runner/work/devsecops-pipeline/devsecops-pipeline/.cache/trivy
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5815315Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:13.5912918Z Running Trivy with options: trivy image devsecops-app:latest
+Security Checks	Trivy container scan	2026-09-05T14:06:13.6449053Z 2026-09-05T14:06:13Z	INFO	[vuln] Vulnerability scanning is enabled
+Security Checks	Trivy container scan	2026-09-05T14:06:13.6451097Z 2026-09-05T14:06:13Z	INFO	[secret] Secret scanning is enabled
+Security Checks	Trivy container scan	2026-09-05T14:06:13.6452666Z 2026-09-05T14:06:13Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+Security Checks	Trivy container scan	2026-09-05T14:06:13.6454261Z 2026-09-05T14:06:13Z	INFO	[secret] Please see https://trivy.dev/docs/v0.74/guide/scanner/secret#recommendation for faster secret detection
+Security Checks	Trivy container scan	2026-09-05T14:06:15.3343664Z 2026-09-05T14:06:15Z	WARN	Third-party SBOM may lead to inaccurate vulnerability detection
+Security Checks	Trivy container scan	2026-09-05T14:06:15.3344333Z 2026-09-05T14:06:15Z	WARN	Recommend using Trivy to generate SBOMs
+Security Checks	Trivy container scan	2026-09-05T14:06:15.4701855Z 2026-09-05T14:06:15Z	INFO	[python] Licenses acquired from one or more METADATA files may be subject to additional terms. Use `--debug` flag to see all affected packages.
+Security Checks	Trivy container scan	2026-09-05T14:06:15.4807818Z 2026-09-05T14:06:15Z	INFO	Detected OS	family="debian" version="13.6"
+Security Checks	Trivy container scan	2026-09-05T14:06:15.4809149Z 2026-09-05T14:06:15Z	INFO	[debian] Detecting vulnerabilities...	os_version="13" pkg_num=87
+Security Checks	Trivy container scan	2026-09-05T14:06:15.4927011Z 2026-09-05T14:06:15Z	INFO	Number of language-specific files	num=1
+Security Checks	Trivy container scan	2026-09-05T14:06:15.4927602Z 2026-09-05T14:06:15Z	INFO	[python-pkg] Detecting vulnerabilities...
+Security Checks	Trivy container scan	2026-09-05T14:06:15.4953616Z 2026-09-05T14:06:15Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.74/guide/scanner/vulnerability#severity-selection for details.
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5182179Z 2026-09-05T14:06:15Z	INFO	Some vulnerabilities have been ignored/suppressed. Use the "--show-suppressed" flag to display them.
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5183056Z 
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5183252Z Report Summary
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5183470Z 
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5184428Z ┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┐
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5185918Z │                                      Target                                      │    Type    │ Vulnerabilities │ Secrets │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5187271Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5188610Z │ devsecops-app:latest (debian 13.6)                                               │   debian   │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5190061Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5191219Z │ Python                                                                           │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5192451Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5193828Z │ usr/local/lib/python3.13/site-packages/bandit-1.9.4.dist-info/METADATA           │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5195350Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5196242Z │ usr/local/lib/python3.13/site-packages/blinker-1.9.0.dist-info/METADATA          │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5197186Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5198294Z │ usr/local/lib/python3.13/site-packages/click-8.5.0.dist-info/METADATA            │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5199153Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5199989Z │ usr/local/lib/python3.13/site-packages/flask-3.1.3.dist-info/METADATA            │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5200816Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5201839Z │ usr/local/lib/python3.13/site-packages/itsdangerous-2.2.0.dist-info/METADATA     │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5202698Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5203520Z │ usr/local/lib/python3.13/site-packages/jaraco_context-6.1.2.dist-info/METADATA   │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5204393Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5205523Z │ usr/local/lib/python3.13/site-packages/jinja2-3.1.6.dist-info/METADATA           │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5206405Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5207195Z │ usr/local/lib/python3.13/site-packages/markdown_it_py-4.2.0.dist-info/METADATA   │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5208057Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5208867Z │ usr/local/lib/python3.13/site-packages/markupsafe-3.0.3.dist-info/METADATA       │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5209901Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5210693Z │ usr/local/lib/python3.13/site-packages/mdurl-0.1.2.dist-info/METADATA            │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5211523Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5212304Z │ usr/local/lib/python3.13/site-packages/msgpack-1.2.2.dist-info/METADATA          │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5213319Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5214113Z │ usr/local/lib/python3.13/site-packages/packaging-26.3.dist-info/METADATA         │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5215225Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5216024Z │ usr/local/lib/python3.13/site-packages/pip-26.2.1.dist-info/METADATA             │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5216891Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5217695Z │ usr/local/lib/python3.13/site-packages/pygments-2.21.0.dist-info/METADATA        │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5218539Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5219328Z │ usr/local/lib/python3.13/site-packages/pyyaml-6.0.3.dist-info/METADATA           │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5220158Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5220923Z │ usr/local/lib/python3.13/site-packages/rich-15.0.0.dist-info/METADATA            │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5221897Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5222686Z │ usr/local/lib/python3.13/site-packages/setuptools-84.0.0.dist-info/METADATA      │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5223524Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5224315Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/autocommand-2.2.2.dis- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5225459Z │ t-info/METADATA                                                                  │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5226159Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5227016Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/backports.tarfile-1.2- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5227804Z │ .0.dist-info/METADATA                                                            │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5228504Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5229286Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/importlib_metadata-8.- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5230098Z │ 7.1.dist-info/METADATA                                                           │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5230803Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5231602Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/jaraco.text-4.0.0.dis- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5232522Z │ t-info/METADATA                                                                  │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5233492Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5235078Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/jaraco_context-6.1.0.- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5236494Z │ dist-info/METADATA                                                               │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5237857Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5238682Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/jaraco_functools-4.4.- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5239549Z │ 0.dist-info/METADATA                                                             │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5240834Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5242152Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/more_itertools-10.8.0- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5243115Z │ .dist-info/METADATA                                                              │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5243859Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5244935Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/packaging-26.0.dist-i- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5245748Z │ nfo/METADATA                                                                     │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5246456Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5247259Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/platformdirs-4.4.0.di- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5248039Z │ st-info/METADATA                                                                 │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5248736Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5249544Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/tomli-2.4.0.dist-info- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5250294Z │ /METADATA                                                                        │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5250971Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5251941Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/wheel-0.46.3.dist-inf- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5252697Z │ o/METADATA                                                                       │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5253371Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5254159Z │ usr/local/lib/python3.13/site-packages/setuptools/_vendor/zipp-3.23.0.dist-info- │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5255340Z │ /METADATA                                                                        │            │                 │         │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5256036Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5256854Z │ usr/local/lib/python3.13/site-packages/stevedore-5.9.1.dist-info/METADATA        │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5257699Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5258488Z │ usr/local/lib/python3.13/site-packages/werkzeug-3.1.8.dist-info/METADATA         │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5259316Z ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5260109Z │ usr/local/lib/python3.13/site-packages/wheel-0.48.0.dist-info/METADATA           │ python-pkg │        0        │    -    │
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5260931Z └──────────────────────────────────────────────────────────────────────────────────┴────────────┴─────────────────┴─────────┘
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5261352Z Legend:
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5261555Z - '-': Not scanned
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5262012Z - '0': Clean (no security findings detected)
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5262226Z 
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5266772Z ##[end-action id=__aquasecurity_trivy-action_2.__run_4;outcome=success;conclusion=success;duration_ms=1953]
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5269066Z ##[start-action display=Remove Trivy Envs file;id=__aquasecurity_trivy-action_2.__run_5]
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5283651Z ##[group]Run rm -f trivy_envs.txt
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5283959Z ^[[36;1mrm -f trivy_envs.txt^[[0m
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5321056Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5321415Z env:
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5321774Z   AWS_REGION: ap-south-1
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5322026Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5322353Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5322854Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5323303Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5323710Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5324139Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5324803Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5325159Z ##[endgroup]
+Security Checks	Trivy container scan	2026-09-05T14:06:15.5412273Z ##[end-action id=__aquasecurity_trivy-action_2.__run_5;outcome=success;conclusion=success;duration_ms=14]
+Security Checks	Debug GitHub OIDC	﻿2026-09-05T14:06:15.5450497Z ##[group]Run set -e
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5450794Z ^[[36;1mset -e^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5451006Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5451252Z ^[[36;1mecho "=========================================="^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5451619Z ^[[36;1mecho "GitHub Actions OIDC Diagnostics"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5451972Z ^[[36;1mecho "=========================================="^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5452281Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5452514Z ^[[36;1mecho "Repository: $GITHUB_REPOSITORY"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5452829Z ^[[36;1mecho "Ref:        $GITHUB_REF"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5453135Z ^[[36;1mecho "Event:      $GITHUB_EVENT_NAME"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5453457Z ^[[36;1mecho "Workflow:   $GITHUB_WORKFLOW"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5453762Z ^[[36;1mecho "Actor:      $GITHUB_ACTOR"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5454041Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5454231Z ^[[36;1mecho ""^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5454485Z ^[[36;1mecho "Requesting GitHub OIDC token..."^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5455125Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5455341Z ^[[36;1mTOKEN_RESPONSE=$(curl -sSf \^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5455755Z ^[[36;1m  -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5456236Z ^[[36;1m  "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com")^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5456606Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5456877Z ^[[36;1mTOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.value')^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5457199Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5457442Z ^[[36;1mif [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5457828Z ^[[36;1m  echo "::error::Could not obtain GitHub OIDC token"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5458155Z ^[[36;1m  exit 1^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5458358Z ^[[36;1mfi^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5458550Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5458778Z ^[[36;1mecho "OIDC token successfully obtained."^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5459096Z ^[[36;1mecho "Token length: ${#TOKEN}"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5459366Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5459554Z ^[[36;1mecho ""^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5459817Z ^[[36;1mecho "Decoding non-sensitive OIDC claims..."^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5460131Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5460362Z ^[[36;1mPAYLOAD=$(echo "$TOKEN" | cut -d '.' -f2)^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5460664Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5460883Z ^[[36;1m# Add base64 padding if necessary^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5461178Z ^[[36;1mcase $((${#PAYLOAD} % 4)) in^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5461480Z ^[[36;1m  2) PAYLOAD="${PAYLOAD}==" ;;^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5461762Z ^[[36;1m  3) PAYLOAD="${PAYLOAD}=" ;;^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5462033Z ^[[36;1mesac^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5462229Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5462491Z ^[[36;1mCLAIMS=$(echo "$PAYLOAD" | base64 -d 2>/dev/null)^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5462807Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5463005Z ^[[36;1mif [ -z "$CLAIMS" ]; then^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5463325Z ^[[36;1m  echo "::error::Could not decode OIDC token payload"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5463654Z ^[[36;1m  exit 1^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5463853Z ^[[36;1mfi^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5464048Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5464231Z ^[[36;1mecho ""^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5464451Z ^[[36;1mecho "OIDC claims:"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5465021Z ^[[36;1mecho "$CLAIMS" | jq '{^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5465271Z ^[[36;1m  iss,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5465638Z ^[[36;1m  aud,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5465837Z ^[[36;1m  sub,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5466042Z ^[[36;1m  repository,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5466284Z ^[[36;1m  repository_owner,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5466528Z ^[[36;1m  repository_id,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5466777Z ^[[36;1m  repository_visibility,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5467035Z ^[[36;1m  ref,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5467229Z ^[[36;1m  sha,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5467427Z ^[[36;1m  event_name,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5467652Z ^[[36;1m  actor,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5467858Z ^[[36;1m  workflow,^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5468086Z ^[[36;1m  job_workflow_ref^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5468318Z ^[[36;1m}'^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5468506Z ^[[36;1m^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5468700Z ^[[36;1mecho ""^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5468929Z ^[[36;1mecho "Expected IAM trust values:"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5469392Z ^[[36;1mecho "aud = sts.amazonaws.com"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5469821Z ^[[36;1mecho "sub = repo:Shaurya-Chauhan-16/devsecops-pipeline:ref:refs/heads/main"^[[0m
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5504896Z shell: /usr/bin/bash -e {0}
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5505165Z env:
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5505379Z   AWS_REGION: ap-south-1
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5505642Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5505978Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5506441Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5506878Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5507287Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5507692Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5508106Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5510695Z   ACTIONS_ID_TOKEN_REQUEST_TOKEN: ***
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5511022Z   ACTIONS_ID_TOKEN_REQUEST_URL: 
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5511282Z ##[endgroup]
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5564788Z ==========================================
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5565339Z GitHub Actions OIDC Diagnostics
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5565631Z ==========================================
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5565987Z Repository: Shaurya-Chauhan-16/devsecops-pipeline
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5566328Z Ref:        refs/heads/main
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5566568Z Event:      push
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5566804Z Workflow:   DevSecOps Security Pipeline
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5567104Z Actor:      Shaurya-Chauhan-16
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5567269Z 
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.5567377Z Requesting GitHub OIDC token...
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7610007Z OIDC token successfully obtained.
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7610643Z Token length: 2070
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7610894Z 
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7611098Z Decoding non-sensitive OIDC claims...
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7648219Z 
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7648398Z OIDC claims:
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7674110Z {
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7674681Z   "iss": "https://token.actions.githubusercontent.com",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7675104Z   "aud": "sts.amazonaws.com",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7675569Z   "sub": "repo:Shaurya-Chauhan-16@182733086/devsecops-pipeline@1358080577:ref:refs/heads/main",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7676149Z   "repository": "Shaurya-Chauhan-16/devsecops-pipeline",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7676586Z   "repository_owner": "Shaurya-Chauhan-16",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7677089Z   "repository_id": "1358080577",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7677370Z   "repository_visibility": "public",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7677650Z   "ref": "refs/heads/main",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7677939Z   "sha": "f4b4a15d7d4edf60496b4aeb787cf31092387152",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7678244Z   "event_name": "push",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7678485Z   "actor": "Shaurya-Chauhan-16",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7678824Z   "workflow": "DevSecOps Security Pipeline",
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7680082Z   "job_workflow_ref": "Shaurya-Chauhan-16/devsecops-pipeline/.github/workflows/security-pipeline.yml@refs/heads/main"
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7681012Z }
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7681137Z 
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7681239Z Expected IAM trust values:
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7681500Z aud = sts.amazonaws.com
+Security Checks	Debug GitHub OIDC	2026-09-05T14:06:15.7682053Z sub = repo:Shaurya-Chauhan-16/devsecops-pipeline:ref:refs/heads/main
+Security Checks	Configure AWS credentials	﻿2026-09-05T14:06:15.7745301Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7746727Z ##[group]Run aws-actions/configure-aws-credentials@v4
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7747057Z with:
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7747415Z   role-to-assume: arn:aws:iam::135330967527:role/GitHubActions-ECR-DevSecOps
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7747818Z   aws-region: ap-south-1
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7748090Z   role-session-name: GitHubActions
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7748391Z   audience: sts.amazonaws.com
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7748669Z   output-env-credentials: true
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7748928Z env:
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7749124Z   AWS_REGION: ap-south-1
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7749373Z   ECR_REPOSITORY: devsecops-app
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7749720Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7750196Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7750631Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7751033Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7751424Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7751821Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+Security Checks	Configure AWS credentials	2026-09-05T14:06:15.7752151Z ##[endgroup]
+Security Checks	Configure AWS credentials	2026-09-05T14:06:16.0975441Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:16.8736072Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:17.1816261Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:17.4430576Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:18.0627402Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:18.4423325Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:18.7175505Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:21.4867033Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:23.5321331Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:35.9358556Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:06:55.6976371Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:07:03.1591392Z Assuming role with OIDC
+Security Checks	Configure AWS credentials	2026-09-05T14:07:42.8565707Z ##[error]Could not assume role with OIDC: Not authorized to perform sts:AssumeRoleWithWebIdentity
+Security Checks	Post Configure AWS credentials	﻿2026-09-05T14:07:42.8712679Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Security Checks	Post Configure AWS credentials	2026-09-05T14:07:42.8714012Z Post job cleanup.
+Security Checks	Post Trivy container scan	﻿2026-09-05T14:07:43.0076168Z ##[warning]Unexpected input(s) 'ignorefile', valid inputs are ['scan-type', 'image-ref', 'input', 'scan-ref', 'exit-code', 'ignore-unfixed', 'vuln-type', 'severity', 'format', 'template', 'output', 'skip-dirs', 'skip-files', 'cache-dir', 'timeout', 'ignore-policy', 'hide-progress', 'list-all-pkgs', 'scanners', 'trivyignores', 'github-pat', 'trivy-config', 'tf-vars', 'limit-severities-for-sarif', 'docker-host', 'version', 'cache', 'skip-setup-trivy', 'token-setup-trivy']
+Security Checks	Post Trivy container scan	2026-09-05T14:07:43.0089942Z Post job cleanup.
+Security Checks	Post Trivy container scan	2026-09-05T14:07:43.0094972Z ##[start-action display=Restore DB from cache;id=__bc318acc-077f-4e40-8dad-e2e60cc7f2af.__actions_cache]
+Security Checks	Post Trivy container scan	2026-09-05T14:07:43.0097453Z ##[end-action id=__bc318acc-077f-4e40-8dad-e2e60cc7f2af.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Post Trivy container scan	2026-09-05T14:07:43.0099604Z ##[start-action display=Install Trivy;id=__bc318acc-077f-4e40-8dad-e2e60cc7f2af.__aquasecurity_setup-trivy]
+Security Checks	Post Trivy container scan	2026-09-05T14:07:43.0195218Z Post job cleanup.
+Security Checks	Post Trivy container scan	2026-09-05T14:07:43.0199717Z ##[end-action id=__bc318acc-077f-4e40-8dad-e2e60cc7f2af.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=9]
+Security Checks	Post Trivy filesystem scan	﻿2026-09-05T14:07:43.0438221Z Post job cleanup.
+Security Checks	Post Trivy filesystem scan	2026-09-05T14:07:43.0441568Z ##[start-action display=Restore DB from cache;id=__efd9f405-8cdf-49a6-b492-04a524c4dc9e.__actions_cache]
+Security Checks	Post Trivy filesystem scan	2026-09-05T14:07:43.0443776Z ##[end-action id=__efd9f405-8cdf-49a6-b492-04a524c4dc9e.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+Security Checks	Post Trivy filesystem scan	2026-09-05T14:07:43.0446012Z ##[start-action display=Install Trivy;id=__efd9f405-8cdf-49a6-b492-04a524c4dc9e.__aquasecurity_setup-trivy]
+Security Checks	Post Trivy filesystem scan	2026-09-05T14:07:43.0533394Z Post job cleanup.
+Security Checks	Post Trivy filesystem scan	2026-09-05T14:07:43.0538825Z ##[end-action id=__efd9f405-8cdf-49a6-b492-04a524c4dc9e.__aquasecurity_setup-trivy;outcome=success;conclusion=success;duration_ms=9]
+Security Checks	Post Checkout code	﻿2026-09-05T14:07:43.0616778Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Security Checks	Post Checkout code	2026-09-05T14:07:43.0618138Z Post job cleanup.
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1473282Z [command]/usr/bin/git version
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1519071Z git version 2.55.0
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1562771Z Temporarily overriding HOME='/home/runner/work/_temp/7b5ee908-c63c-4b8e-9497-81b49d4c84a1' before making global git config changes
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1564443Z Adding repository directory to the temporary git global config as a safe directory
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1580972Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devsecops-pipeline/devsecops-pipeline
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1622214Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Security Checks	Post Checkout code	2026-09-05T14:07:43.1670984Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Security Checks	Post Checkout code	2026-09-05T14:07:43.2025254Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Security Checks	Post Checkout code	2026-09-05T14:07:43.2065290Z http.https://github.com/.extraheader
+Security Checks	Post Checkout code	2026-09-05T14:07:43.2072730Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Security Checks	Post Checkout code	2026-09-05T14:07:43.2120157Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Security Checks	Post Checkout code	2026-09-05T14:07:43.2407333Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Security Checks	Post Checkout code	2026-09-05T14:07:43.2448094Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Security Checks	Complete job	﻿2026-09-05T14:07:43.2861966Z Cleaning up orphan processes
+Security Checks	Complete job	2026-09-05T14:07:43.3152107Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, aws-actions/configure-aws-credentials@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
