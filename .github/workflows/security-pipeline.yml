@@ -196,9 +196,10 @@ jobs:
             --image-scanning-configuration scanOnPush=true \
             --region "$AWS_REGION"
 
-          aws ecr describe-image-scanning-configuration \
-            --repository-name "$ECR_REPOSITORY" \
-            --region "$AWS_REGION"
+          aws ecr describe-repositories \
+            --repository-names "$ECR_REPOSITORY" \
+            --region "$AWS_REGION" \
+            --query 'repositories[0].imageScanningConfiguration'
 
       # ------------------------------------------------------------
       # 13. Login to Amazon ECR
